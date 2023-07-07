@@ -22,7 +22,7 @@ public class MovieController {
         String message = "User tried to create new item witth name: " +  movieDto.getTitle() ;
         log.info(message);
 
-        MovieDto createMovieDto = this.movieService.createMedia(movieDto);
+        MovieDto createMovieDto = this.movieService.createMovie(movieDto);
         return  new ResponseEntity<>(createMovieDto, HttpStatus.CREATED);
     }
 }
