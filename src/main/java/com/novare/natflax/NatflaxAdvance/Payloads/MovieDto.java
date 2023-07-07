@@ -7,7 +7,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class MediaDto {
+public class MovieDto {
 
     private int media_id;
     private String banner_url;

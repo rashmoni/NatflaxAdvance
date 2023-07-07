@@ -10,7 +10,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Media {
+public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int media_id;
