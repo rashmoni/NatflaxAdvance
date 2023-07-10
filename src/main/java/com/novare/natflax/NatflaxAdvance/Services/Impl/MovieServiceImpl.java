@@ -1,7 +1,10 @@
 package com.novare.natflax.NatflaxAdvance.Services.Impl;
 
 import com.novare.natflax.NatflaxAdvance.Entity.Movie;
+import com.novare.natflax.NatflaxAdvance.Entity.User;
+import com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException;
 import com.novare.natflax.NatflaxAdvance.Payloads.MovieDto;
+import com.novare.natflax.NatflaxAdvance.Payloads.UserDto;
 import com.novare.natflax.NatflaxAdvance.Repositories.MovieRepo;
 import com.novare.natflax.NatflaxAdvance.Services.FileSystemStorageService;
 import com.novare.natflax.NatflaxAdvance.Services.IStorageService;
@@ -13,16 +16,16 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @Log4j2
 public class MovieServiceImpl implements MovieService {
-
     @Autowired
-    private MovieRepo mediaRepo;
-
+    private MovieRepo movieRepo;
     @Autowired
     private ModelMapper modelMapper;
-
 
     @Autowired
     FileSystemStorageService fileSystemStorageService;
@@ -34,7 +37,7 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public MovieDto createMovie(MovieDto movieDto) {
+    public MovieDto createMovie(MovieDto movieDto ) {
         String logMessage;
         if(movieDto.getBanner_url() != null || movieDto.getThumbnail_url() != null){
             logMessage = "Trying to convert base64 image and store it to filesystem..";
@@ -56,12 +59,29 @@ public class MovieServiceImpl implements MovieService {
             movieDto.setThumbnail_url(complete_thumb_URL);
         }
         Movie movie = this.dtoToMovie(movieDto);
-        Movie savedMovie = this.mediaRepo.save(movie);
+        Movie savedMovie = this.movieRepo.save(movie);
         logMessage = "AuctionItem is save in database";
         log.info(logMessage);
         return this.movieToDto(savedMovie);
     }
 
+    @Override
+    public void deleteMovie(Integer mid) {
+        Movie movie = this.movieRepo.findById(mid).orElseThrow(() -> new ResourceNotFoundException("Movie", "Id", mid));
+        this.movieRepo.delete(movie);
+
+    }
+    @Override
+    public List<MovieDto> getAllMovies() {
+        List<Movie> movies= this.movieRepo.findAll();
+        List<MovieDto> userDtos = movies.stream().map(user -> this.movieToDto(user)).collect(Collectors.toList());
+        return userDtos;
+    }
+    @Override
+    public MovieDto getMovieById(Integer movieId) {
+        Movie movie = this.movieRepo.findById(movieId).orElseThrow(() -> new ResourceNotFoundException("Movie", "Id", movieId));
+        return this.movieToDto(movie);
+    }
 
     private Movie dtoToMovie(MovieDto movieDto) {
         Movie movie = this.modelMapper.map(movieDto, Movie.class);
