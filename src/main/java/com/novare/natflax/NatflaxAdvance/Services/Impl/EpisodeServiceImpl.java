@@ -16,6 +16,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @Log4j2
 public class EpisodeServiceImpl implements EpisodeService {
@@ -72,5 +75,19 @@ public class EpisodeServiceImpl implements EpisodeService {
 
         Episode newEpisode = this.episodeRepo.save(episode);
         return this.modelMapper.map(newEpisode, EpisodeDto.class);
+    }
+
+    @Override
+    public List<EpisodeDto> getEpisodeBySeries(Integer seriesId) {
+
+        Series series = this.seriesRepo.findById(seriesId)
+                .orElseThrow(() -> new ResourceNotFoundException("Series", "series id ", seriesId));
+
+        List<Episode> allEpisodesbySeries = this.episodeRepo.findBySeries(series);
+
+        List<EpisodeDto> allEpisodeBySeriesDtos = allEpisodesbySeries.stream().map((episode) -> this.modelMapper.map(episode, EpisodeDto.class))
+                .collect(Collectors.toList());
+
+        return allEpisodeBySeriesDtos;
     }
 }

@@ -11,6 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @Log4j2
 @RequestMapping("/api")
@@ -20,11 +22,20 @@ public class EpisodeController {
     private EpisodeService episodeService;
 
     @PostMapping("/{seriesId}/episode/")
-    public ResponseEntity<EpisodeDto> createSeries(@Valid @RequestBody EpisodeDto episodeDto, @PathVariable Integer seriesId) {
+    public ResponseEntity<EpisodeDto> createEpisode(@Valid @RequestBody EpisodeDto episodeDto, @PathVariable Integer seriesId) {
         String message = "User tried to create new item with name: " + episodeDto.getTitle();
         log.info(message);
 
         EpisodeDto createEpisodeDto = this.episodeService.createEpisode(episodeDto, seriesId);
         return new ResponseEntity<>(createEpisodeDto, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/episode/{seriesId}")
+    public ResponseEntity<List<EpisodeDto>> getEpisodeBySeries(@PathVariable Integer seriesId) {
+        String message = "User tried to create new item with name: ";
+        log.info(message);
+
+        List<EpisodeDto> allEpisodesForSeries = this.episodeService.getEpisodeBySeries(seriesId);
+        return new ResponseEntity<>(allEpisodesForSeries, HttpStatus.OK);
     }
 }
