@@ -12,8 +12,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Episode {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int episode_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int episodeID;
 
     private String thumbnail_url;
     private String title;

@@ -16,8 +16,8 @@ import java.util.List;
 public class Series {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int seriesId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int seriesID;
 
     private String banner_url;
     private String thumbnail_url;

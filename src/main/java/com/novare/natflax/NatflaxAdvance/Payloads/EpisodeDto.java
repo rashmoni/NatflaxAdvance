@@ -10,6 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class EpisodeDto {
+    @JsonIgnore
     private Integer episodeID;
     private String thumbnail_url;
     private String title;
@@ -18,6 +19,7 @@ public class EpisodeDto {
     private int episode_no;
     private String summary;
     private int genre_id;
+
     @JsonIgnore
     private Series series;
 }
