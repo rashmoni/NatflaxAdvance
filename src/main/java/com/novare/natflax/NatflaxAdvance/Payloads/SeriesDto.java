@@ -9,13 +9,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class SeriesDto {
-
-    private int media_id;
+    private int series_id;
     private String banner_url;
     private String thumbnail_url;
     private String title;
     private String summary;
     private int genre_id;
-
-
 }

@@ -2,6 +2,7 @@ package com.novare.natflax.NatflaxAdvance.Controllers;
 
 import com.novare.natflax.NatflaxAdvance.Payloads.ApiResponse;
 import com.novare.natflax.NatflaxAdvance.Payloads.DocumentoryDto;
+import com.novare.natflax.NatflaxAdvance.Payloads.MovieDto;
 import com.novare.natflax.NatflaxAdvance.Services.DocumentoryService;
 import jakarta.validation.Valid;
 import lombok.extern.log4j.Log4j2;
@@ -45,6 +46,11 @@ public class DocumentariesController {
     public ResponseEntity<DocumentoryDto> getSingleDocumentory(@PathVariable Integer documentoryId){
         return ResponseEntity.ok(this.documentoryService.getDocumentoryById(documentoryId));
     }
+    @PutMapping("/")
+    public ResponseEntity<DocumentoryDto> updateDocumentory(@Valid @RequestBody DocumentoryDto documentoryDto){
+        return ResponseEntity.ok(this.documentoryService.updateDocumentory(documentoryDto));
+    }
+
 
 
 }

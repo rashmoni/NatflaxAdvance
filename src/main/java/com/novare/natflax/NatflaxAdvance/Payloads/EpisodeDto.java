@@ -1,5 +1,7 @@
 package com.novare.natflax.NatflaxAdvance.Payloads;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.novare.natflax.NatflaxAdvance.Entity.Series;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -7,14 +9,15 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class DocumentoryDto {
-    private int document_id;
-    private String banner_url;
+public class EpisodeDto {
+    private Integer episodeID;
     private String thumbnail_url;
     private String title;
     private String video_code;
-    private String narrator;
+    private int season_no;
+    private int episode_no;
     private String summary;
     private int genre_id;
-
+    @JsonIgnore
+    private Series series;
 }

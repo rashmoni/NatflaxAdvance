@@ -5,25 +5,25 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Entity
-@Table(name="documentory")
-@NoArgsConstructor
+@Table(name = "episode")
 @Getter
 @Setter
-public class Documentory {
+@NoArgsConstructor
+public class Episode {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int document_id;
+    private int episode_id;
 
-    private String banner_url;
     private String thumbnail_url;
     private String title;
     private String video_code;
-    private String narrator;
+    private int season_no;
+    private int episode_no;
     private String summary;
     private int genre_id;
 
-
-
+    @ManyToOne
+    @JoinColumn(name = "series_id")
+    private Series series;
 }

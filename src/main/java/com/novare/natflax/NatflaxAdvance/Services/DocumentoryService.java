@@ -14,4 +14,6 @@ public interface DocumentoryService {
    DocumentoryDto getDocumentoryById(Integer documentoryId);
 
     DocumentoryDto documentoryToDto(Documentory user);
+
+    DocumentoryDto updateDocumentory(DocumentoryDto documentoryDto);
 }
