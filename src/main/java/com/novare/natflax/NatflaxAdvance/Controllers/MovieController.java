@@ -22,7 +22,7 @@ public class MovieController {
     private MovieService movieService;
 
     @PostMapping("/")
-    public ResponseEntity<MovieDto> createMedia(@Valid @RequestBody MovieDto movieDto) {
+    public ResponseEntity<MovieDto> createMovie(@Valid @RequestBody MovieDto movieDto) {
         String message = "User tried to create new item witth name: " + movieDto.getTitle();
         log.info(message);
 
@@ -45,5 +45,11 @@ public class MovieController {
     public ResponseEntity<MovieDto> getSingleMovie(@PathVariable Integer movieId){
         return ResponseEntity.ok(this.movieService.getMovieById(movieId));
     }
+
+    @PutMapping("/")
+    public ResponseEntity<MovieDto> updateMovie(@Valid @RequestBody MovieDto movieDto){
+        return ResponseEntity.ok(this.movieService.updateMovie(movieDto));
+    }
+
 }
 

@@ -1,181 +1,364 @@
-2023-07-07T16:58:13.424+02:00  INFO 63969 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.7 with PID 63969 (/Users/prasanthdey/Desktop/NatflaxAdvance/target/classes started by prasanthdey in /Users/prasanthdey/Desktop/NatflaxAdvance)
-2023-07-07T16:58:13.427+02:00  INFO 63969 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-07-07T16:58:13.449+02:00  INFO 63969 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-07T16:58:13.449+02:00  INFO 63969 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-07T16:58:13.769+02:00  INFO 63969 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-07T16:58:13.801+02:00  INFO 63969 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
-2023-07-07T16:58:14.107+02:00  INFO 63969 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2023-07-07T16:58:14.113+02:00  INFO 63969 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-07T16:58:14.113+02:00  INFO 63969 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
-2023-07-07T16:58:14.144+02:00  INFO 63969 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-07T16:58:14.144+02:00  INFO 63969 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 694 ms
-2023-07-07T16:58:14.226+02:00  INFO 63969 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-07T16:58:14.255+02:00  INFO 63969 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
-2023-07-07T16:58:14.256+02:00  INFO 63969 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-07T16:58:14.316+02:00  INFO 63969 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-07T16:58:14.390+02:00  INFO 63969 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-07T16:58:14.403+02:00  INFO 63969 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-07T16:58:14.562+02:00  INFO 63969 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a86ccb8
-2023-07-07T16:58:14.563+02:00  INFO 63969 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-07T16:58:14.685+02:00  INFO 63969 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-07T16:58:15.002+02:00  INFO 63969 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-07T16:58:15.058+02:00  INFO 63969 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-07T16:58:15.259+02:00  WARN 63969 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-07T16:58:15.410+02:00  INFO 63969 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-07T16:58:15.428+02:00  INFO 63969 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2023-07-07T16:58:15.433+02:00  INFO 63969 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.223 seconds (process running for 2.478)
-2023-07-07T16:58:36.507+02:00  INFO 63969 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-07T16:58:36.508+02:00  INFO 63969 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-07T16:58:36.509+02:00  INFO 63969 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-07-07T16:58:36.582+02:00  INFO 63969 --- [http-nio-9090-exec-1] c.n.n.N.Controllers.MovieController      : User tried to create new item witth name: TestMov
-2023-07-07T16:58:36.583+02:00  INFO 63969 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : trying to convert base64 image and store it to filesystem
-2023-07-07T16:58:36.606+02:00  INFO 63969 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9000/files/1688741916605.png ---http://localhost:9000/files/1688741916606.png
-2023-07-07T16:58:36.654+02:00  INFO 63969 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : AuctionItem is save in database
-2023-07-07T16:58:52.476+02:00  INFO 63969 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-07T16:58:52.529+02:00  INFO 63969 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-07T16:58:52.536+02:00  INFO 63969 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-07-07T17:00:27.142+02:00  INFO 64051 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.7 with PID 64051 (/Users/prasanthdey/Desktop/NatflaxAdvance/target/classes started by prasanthdey in /Users/prasanthdey/Desktop/NatflaxAdvance)
-2023-07-07T17:00:27.143+02:00  INFO 64051 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-07-07T17:00:27.171+02:00  INFO 64051 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-07T17:00:27.171+02:00  INFO 64051 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-07T17:00:27.476+02:00  INFO 64051 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-07T17:00:27.508+02:00  INFO 64051 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
-2023-07-07T17:00:27.801+02:00  INFO 64051 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2023-07-07T17:00:27.806+02:00  INFO 64051 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-07T17:00:27.806+02:00  INFO 64051 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
-2023-07-07T17:00:27.834+02:00  INFO 64051 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-07T17:00:27.835+02:00  INFO 64051 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 664 ms
-2023-07-07T17:00:27.915+02:00  INFO 64051 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-07T17:00:27.934+02:00  INFO 64051 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
-2023-07-07T17:00:27.935+02:00  INFO 64051 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-07T17:00:27.988+02:00  INFO 64051 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-07T17:00:28.050+02:00  INFO 64051 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-07T17:00:28.061+02:00  INFO 64051 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-07T17:00:28.212+02:00  INFO 64051 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f94709d
-2023-07-07T17:00:28.213+02:00  INFO 64051 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-07T17:00:28.317+02:00  INFO 64051 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-07T17:00:28.598+02:00  INFO 64051 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-07T17:00:28.653+02:00  INFO 64051 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-07T17:00:28.828+02:00  WARN 64051 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-07T17:00:28.977+02:00  INFO 64051 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-07T17:00:28.998+02:00  INFO 64051 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2023-07-07T17:00:29.005+02:00  INFO 64051 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.068 seconds (process running for 2.274)
-2023-07-07T17:00:34.647+02:00  INFO 64051 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-07T17:00:34.647+02:00  INFO 64051 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-07T17:00:34.648+02:00  INFO 64051 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-07-07T17:00:34.707+02:00  INFO 64051 --- [http-nio-9090-exec-2] c.n.n.N.Controllers.MovieController      : User tried to create new item witth name: TestMov
-2023-07-07T17:00:34.707+02:00  INFO 64051 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
-2023-07-07T17:00:34.730+02:00  INFO 64051 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9000/files/1688742034728.png ---http://localhost:9000/files/1688742034729.png
-2023-07-07T17:00:34.778+02:00  INFO 64051 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : AuctionItem is save in database
-2023-07-07T17:01:38.655+02:00  INFO 64051 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-07T17:01:38.682+02:00  INFO 64051 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-07T17:01:38.687+02:00  INFO 64051 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-07-07T17:03:46.927+02:00  INFO 64322 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.7 with PID 64322 (/Users/prasanthdey/Desktop/NatflaxAdvance/target/classes started by prasanthdey in /Users/prasanthdey/Desktop/NatflaxAdvance)
-2023-07-07T17:03:46.928+02:00  INFO 64322 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-07-07T17:03:46.953+02:00  INFO 64322 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-07T17:03:46.953+02:00  INFO 64322 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-07T17:03:47.270+02:00  INFO 64322 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-07T17:03:47.301+02:00  INFO 64322 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
-2023-07-07T17:03:47.594+02:00  INFO 64322 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2023-07-07T17:03:47.599+02:00  INFO 64322 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-07T17:03:47.599+02:00  INFO 64322 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
-2023-07-07T17:03:47.627+02:00  INFO 64322 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-07T17:03:47.627+02:00  INFO 64322 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 674 ms
-2023-07-07T17:03:47.707+02:00  INFO 64322 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-07T17:03:47.728+02:00  INFO 64322 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
-2023-07-07T17:03:47.730+02:00  INFO 64322 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-07T17:03:47.782+02:00  INFO 64322 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-07T17:03:47.840+02:00  INFO 64322 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-07T17:03:47.847+02:00  INFO 64322 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-07T17:03:48.001+02:00  INFO 64322 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61d62373
-2023-07-07T17:03:48.002+02:00  INFO 64322 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-07T17:03:48.114+02:00  INFO 64322 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-07T17:03:48.428+02:00  INFO 64322 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-07T17:03:48.483+02:00  INFO 64322 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-07T17:03:48.671+02:00  WARN 64322 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-07T17:03:48.818+02:00  INFO 64322 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-07T17:03:48.835+02:00  INFO 64322 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2023-07-07T17:03:48.840+02:00  INFO 64322 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.114 seconds (process running for 2.317)
-2023-07-07T17:04:14.941+02:00  INFO 64322 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-07T17:04:14.941+02:00  INFO 64322 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-07T17:04:14.942+02:00  INFO 64322 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-07-07T17:04:15.004+02:00  INFO 64322 --- [http-nio-9090-exec-2] c.n.n.N.Controllers.MovieController      : User tried to create new item witth name: TestMov
-2023-07-07T17:04:15.005+02:00  INFO 64322 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
-2023-07-07T17:04:15.032+02:00  INFO 64322 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9000/files/1688742255031.png ---http://localhost:9000/files/1688742255032.png
-2023-07-07T17:04:15.074+02:00  INFO 64322 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : AuctionItem is save in database
-2023-07-07T17:05:20.972+02:00  INFO 64322 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-07T17:05:21.003+02:00  INFO 64322 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-07T17:05:21.008+02:00  INFO 64322 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-07-07T17:05:27.045+02:00  INFO 64382 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.7 with PID 64382 (/Users/prasanthdey/Desktop/NatflaxAdvance/target/classes started by prasanthdey in /Users/prasanthdey/Desktop/NatflaxAdvance)
-2023-07-07T17:05:27.047+02:00  INFO 64382 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-07-07T17:05:27.073+02:00  INFO 64382 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-07T17:05:27.073+02:00  INFO 64382 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-07T17:05:27.393+02:00  INFO 64382 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-07T17:05:27.426+02:00  INFO 64382 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
-2023-07-07T17:05:27.752+02:00  INFO 64382 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2023-07-07T17:05:27.758+02:00  INFO 64382 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-07T17:05:27.758+02:00  INFO 64382 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
-2023-07-07T17:05:27.798+02:00  INFO 64382 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-07T17:05:27.798+02:00  INFO 64382 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 725 ms
-2023-07-07T17:05:27.880+02:00  INFO 64382 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-07T17:05:27.900+02:00  INFO 64382 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
-2023-07-07T17:05:27.901+02:00  INFO 64382 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-07T17:05:27.954+02:00  INFO 64382 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-07T17:05:28.017+02:00  INFO 64382 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-07T17:05:28.026+02:00  INFO 64382 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-07T17:05:28.194+02:00  INFO 64382 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61d62373
-2023-07-07T17:05:28.195+02:00  INFO 64382 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-07T17:05:28.303+02:00  INFO 64382 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-07T17:05:28.588+02:00  INFO 64382 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-07T17:05:28.675+02:00  INFO 64382 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-07T17:05:28.873+02:00  WARN 64382 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-07T17:05:29.021+02:00  INFO 64382 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-07T17:05:29.036+02:00  INFO 64382 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2023-07-07T17:05:29.044+02:00  INFO 64382 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.204 seconds (process running for 2.417)
-2023-07-07T17:05:40.098+02:00  INFO 64382 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-07T17:05:40.099+02:00  INFO 64382 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-07T17:05:40.099+02:00  INFO 64382 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-07-07T17:05:40.163+02:00  INFO 64382 --- [http-nio-9090-exec-2] c.n.n.N.Controllers.MovieController      : User tried to create new item witth name: TestMov
-2023-07-07T17:05:40.163+02:00  INFO 64382 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
-2023-07-07T17:05:40.188+02:00  INFO 64382 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9090/files/1688742340186.png ---http://localhost:9090/files/1688742340187.png
-2023-07-07T17:05:40.231+02:00  INFO 64382 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : AuctionItem is save in database
-2023-07-07T17:07:32.433+02:00  INFO 64382 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-07T17:07:32.467+02:00  INFO 64382 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-07T17:07:32.472+02:00  INFO 64382 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-07-07T17:10:22.898+02:00  INFO 64652 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.7 with PID 64652 (/Users/prasanthdey/Desktop/NatflaxAdvance/target/classes started by prasanthdey in /Users/prasanthdey/Desktop/NatflaxAdvance)
-2023-07-07T17:10:22.899+02:00  INFO 64652 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
-2023-07-07T17:10:22.925+02:00  INFO 64652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-07T17:10:22.925+02:00  INFO 64652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-07T17:10:23.231+02:00  INFO 64652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-07T17:10:23.261+02:00  INFO 64652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
-2023-07-07T17:10:23.588+02:00  INFO 64652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2023-07-07T17:10:23.593+02:00  INFO 64652 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-07T17:10:23.593+02:00  INFO 64652 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
-2023-07-07T17:10:23.625+02:00  INFO 64652 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-07T17:10:23.625+02:00  INFO 64652 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 700 ms
-2023-07-07T17:10:23.704+02:00  INFO 64652 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-07T17:10:23.722+02:00  INFO 64652 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
-2023-07-07T17:10:23.723+02:00  INFO 64652 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-07-07T17:10:23.773+02:00  INFO 64652 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-07T17:10:23.838+02:00  INFO 64652 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-07-07T17:10:23.845+02:00  INFO 64652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-07T17:10:24.003+02:00  INFO 64652 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d16e9ea
-2023-07-07T17:10:24.004+02:00  INFO 64652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-07T17:10:24.106+02:00  INFO 64652 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-07-07T17:10:24.390+02:00  INFO 64652 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-07-07T17:10:24.443+02:00  INFO 64652 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-07-07T17:10:24.624+02:00  WARN 64652 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-07-07T17:10:24.777+02:00  INFO 64652 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-07T17:10:24.793+02:00  INFO 64652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2023-07-07T17:10:24.799+02:00  INFO 64652 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.1 seconds (process running for 2.33)
-2023-07-07T17:10:27.345+02:00  INFO 64652 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-07T17:10:27.345+02:00  INFO 64652 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-07T17:10:27.346+02:00  INFO 64652 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-07-07T17:10:27.415+02:00  INFO 64652 --- [http-nio-9090-exec-2] c.n.n.N.Controllers.MovieController      : User tried to create new item witth name: TestMov
-2023-07-07T17:10:27.415+02:00  INFO 64652 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
-2023-07-07T17:10:27.437+02:00  INFO 64652 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9090/files/1688742627436.png ---http://localhost:9090/files/1688742627437.png
-2023-07-07T17:10:27.482+02:00  INFO 64652 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : AuctionItem is save in database
-2023-07-07T17:10:38.241+02:00  INFO 64652 --- [http-nio-9090-exec-3] c.n.n.N.Controllers.FilesController      : Image file processed
-2023-07-07T17:10:45.739+02:00  INFO 64652 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-07T17:10:45.786+02:00  INFO 64652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-07T17:10:45.794+02:00  INFO 64652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-11T13:06:29.965+02:00  INFO 17990 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.2 with PID 17990 (/Users/rashmonidey/Desktop/NatflaxAdvance/target/classes started by rashmonidey in /Users/rashmonidey/Desktop/NatflaxAdvance)
+2023-07-11T13:06:29.970+02:00  INFO 17990 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-07-11T13:06:30.001+02:00  INFO 17990 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11T13:06:30.001+02:00  INFO 17990 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11T13:06:30.329+02:00  INFO 17990 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11T13:06:30.362+02:00  INFO 17990 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
+2023-07-11T13:06:30.683+02:00  INFO 17990 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-07-11T13:06:30.689+02:00  INFO 17990 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-11T13:06:30.689+02:00  INFO 17990 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11T13:06:30.716+02:00  INFO 17990 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-11T13:06:30.717+02:00  INFO 17990 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 715 ms
+2023-07-11T13:06:30.779+02:00  INFO 17990 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11T13:06:30.805+02:00  INFO 17990 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11T13:06:30.806+02:00  INFO 17990 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-11T13:06:30.861+02:00  INFO 17990 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:06:30.928+02:00  INFO 17990 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11T13:06:30.937+02:00  INFO 17990 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-11T13:06:31.171+02:00  INFO 17990 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@111e6e1
+2023-07-11T13:06:31.172+02:00  INFO 17990 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-11T13:06:31.301+02:00  INFO 17990 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:06:31.589+02:00  INFO 17990 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11T13:06:31.725+02:00  INFO 17990 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:06:31.904+02:00  WARN 17990 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-11T13:06:32.044+02:00  INFO 17990 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-11T13:06:32.063+02:00  INFO 17990 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-07-11T13:06:32.068+02:00  INFO 17990 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.336 seconds (process running for 2.571)
+2023-07-11T13:06:51.935+02:00  INFO 17990 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:06:51.972+02:00  INFO 17990 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-11T13:06:51.976+02:00  INFO 17990 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-11T13:34:58.913+02:00  INFO 19989 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.2 with PID 19989 (/Users/rashmonidey/Desktop/NatflaxAdvance/target/classes started by rashmonidey in /Users/rashmonidey/Desktop/NatflaxAdvance)
+2023-07-11T13:34:58.914+02:00  INFO 19989 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-07-11T13:34:58.935+02:00  INFO 19989 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11T13:34:58.935+02:00  INFO 19989 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11T13:34:59.307+02:00  INFO 19989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11T13:34:59.347+02:00  INFO 19989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 4 JPA repository interfaces.
+2023-07-11T13:34:59.685+02:00  INFO 19989 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-07-11T13:34:59.690+02:00  INFO 19989 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-11T13:34:59.690+02:00  INFO 19989 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11T13:34:59.713+02:00  INFO 19989 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-11T13:34:59.713+02:00  INFO 19989 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 778 ms
+2023-07-11T13:34:59.776+02:00  INFO 19989 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11T13:34:59.797+02:00  INFO 19989 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11T13:34:59.798+02:00  INFO 19989 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-11T13:34:59.847+02:00  INFO 19989 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:34:59.913+02:00  INFO 19989 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11T13:34:59.921+02:00  INFO 19989 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-11T13:35:00.092+02:00  INFO 19989 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@781e932a
+2023-07-11T13:35:00.093+02:00  INFO 19989 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-11T13:35:00.213+02:00  INFO 19989 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:35:00.555+02:00  INFO 19989 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11T13:35:00.655+02:00  INFO 19989 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:35:00.864+02:00  WARN 19989 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-11T13:35:01.012+02:00  INFO 19989 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-11T13:35:01.029+02:00  INFO 19989 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-07-11T13:35:01.034+02:00  INFO 19989 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.33 seconds (process running for 2.547)
+2023-07-11T13:36:01.239+02:00  INFO 19989 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:36:01.299+02:00  INFO 19989 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-11T13:36:01.304+02:00  INFO 19989 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-11T13:36:03.983+02:00  INFO 20085 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.2 with PID 20085 (/Users/rashmonidey/Desktop/NatflaxAdvance/target/classes started by rashmonidey in /Users/rashmonidey/Desktop/NatflaxAdvance)
+2023-07-11T13:36:03.984+02:00  INFO 20085 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-07-11T13:36:04.007+02:00  INFO 20085 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11T13:36:04.007+02:00  INFO 20085 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11T13:36:04.318+02:00  INFO 20085 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11T13:36:04.347+02:00  INFO 20085 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
+2023-07-11T13:36:04.641+02:00  INFO 20085 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-07-11T13:36:04.646+02:00  INFO 20085 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-11T13:36:04.646+02:00  INFO 20085 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11T13:36:04.673+02:00  INFO 20085 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-11T13:36:04.673+02:00  INFO 20085 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 666 ms
+2023-07-11T13:36:04.738+02:00  INFO 20085 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11T13:36:04.758+02:00  INFO 20085 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11T13:36:04.759+02:00  INFO 20085 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-11T13:36:04.808+02:00  INFO 20085 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:36:04.868+02:00  INFO 20085 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11T13:36:04.877+02:00  INFO 20085 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-11T13:36:05.038+02:00  INFO 20085 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ccca95e
+2023-07-11T13:36:05.038+02:00  INFO 20085 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-11T13:36:05.157+02:00  INFO 20085 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:36:05.482+02:00  INFO 20085 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11T13:36:05.567+02:00  INFO 20085 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:36:05.780+02:00  WARN 20085 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-11T13:36:05.922+02:00  INFO 20085 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-11T13:36:05.935+02:00  INFO 20085 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-07-11T13:36:05.940+02:00  INFO 20085 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.168 seconds (process running for 2.368)
+2023-07-11T13:38:05.558+02:00  INFO 20085 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11T13:38:05.559+02:00  INFO 20085 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-11T13:38:05.562+02:00  INFO 20085 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-07-11T13:38:05.666+02:00  INFO 20085 --- [http-nio-9090-exec-2] c.n.n.N.Controllers.MovieController      : User tried to create new item witth name: TestMov
+2023-07-11T13:38:05.666+02:00  INFO 20085 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
+2023-07-11T13:38:05.709+02:00  INFO 20085 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9090/files/1689075485707.png ---http://localhost:9090/files/1689075485708.png
+2023-07-11T13:38:05.805+02:00  INFO 20085 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : Movie is saved in database
+2023-07-11T13:38:23.379+02:00  INFO 20085 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:38:23.457+02:00  INFO 20085 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-11T13:38:23.464+02:00  INFO 20085 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-11T13:38:36.650+02:00  INFO 20352 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.2 with PID 20352 (/Users/rashmonidey/Desktop/NatflaxAdvance/target/classes started by rashmonidey in /Users/rashmonidey/Desktop/NatflaxAdvance)
+2023-07-11T13:38:36.651+02:00  INFO 20352 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-07-11T13:38:36.677+02:00  INFO 20352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11T13:38:36.677+02:00  INFO 20352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11T13:38:37.032+02:00  INFO 20352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11T13:38:37.063+02:00  INFO 20352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 4 JPA repository interfaces.
+2023-07-11T13:38:37.360+02:00  INFO 20352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-07-11T13:38:37.366+02:00  INFO 20352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-11T13:38:37.366+02:00  INFO 20352 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11T13:38:37.390+02:00  INFO 20352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-11T13:38:37.390+02:00  INFO 20352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 713 ms
+2023-07-11T13:38:37.456+02:00  INFO 20352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11T13:38:37.483+02:00  INFO 20352 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11T13:38:37.484+02:00  INFO 20352 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-11T13:38:37.543+02:00  INFO 20352 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:38:37.614+02:00  INFO 20352 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11T13:38:37.624+02:00  INFO 20352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-11T13:38:37.822+02:00  INFO 20352 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c3f18f2
+2023-07-11T13:38:37.822+02:00  INFO 20352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-11T13:38:37.950+02:00  INFO 20352 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:38:38.259+02:00  INFO 20352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11T13:38:38.354+02:00  INFO 20352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:38:38.565+02:00  WARN 20352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-11T13:38:38.708+02:00  INFO 20352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-11T13:38:38.721+02:00  INFO 20352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-07-11T13:38:38.726+02:00  INFO 20352 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.3 seconds (process running for 2.539)
+2023-07-11T13:38:50.392+02:00  INFO 20352 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11T13:38:50.393+02:00  INFO 20352 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-11T13:38:50.394+02:00  INFO 20352 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-11T13:38:50.483+02:00  INFO 20352 --- [http-nio-9090-exec-1] c.n.n.N.Controllers.MovieController      : User tried to create new item witth name: TestMov
+2023-07-11T13:38:50.484+02:00  INFO 20352 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
+2023-07-11T13:38:50.517+02:00  INFO 20352 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9090/files/1689075530515.png ---http://localhost:9090/files/1689075530517.png
+2023-07-11T13:38:50.527+02:00 ERROR 20352 --- [http-nio-9090-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.modelmapper.ConfigurationException: ModelMapper configuration errors:
+
+1) The destination property com.novare.natflax.NatflaxAdvance.Entity.Movie.setMovie_id() matches multiple source property hierarchies:
+
+	com.novare.natflax.NatflaxAdvance.Payloads.MovieDto.getMedia_id()
+	com.novare.natflax.NatflaxAdvance.Payloads.MovieDto.getGenre_id()
+
+1 error] with root cause
+
+org.modelmapper.ConfigurationException: ModelMapper configuration errors:
+
+1) The destination property com.novare.natflax.NatflaxAdvance.Entity.Movie.setMovie_id() matches multiple source property hierarchies:
+
+	com.novare.natflax.NatflaxAdvance.Payloads.MovieDto.getMedia_id()
+	com.novare.natflax.NatflaxAdvance.Payloads.MovieDto.getGenre_id()
+
+1 error
+	at org.modelmapper.internal.Errors.throwConfigurationExceptionIfErrorsExist(Errors.java:240) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.matchDestination(ImplicitMappingBuilder.java:159) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.build(ImplicitMappingBuilder.java:90) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.ImplicitMappingBuilder.build(ImplicitMappingBuilder.java:75) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.TypeMapStore.getOrCreate(TypeMapStore.java:131) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.TypeMapStore.getOrCreate(TypeMapStore.java:106) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:112) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:71) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:589) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.ModelMapper.map(ModelMapper.java:422) ~[modelmapper-3.1.1.jar:na]
+	at com.novare.natflax.NatflaxAdvance.Services.Impl.MovieServiceImpl.dtoToMovie(MovieServiceImpl.java:120) ~[classes/:na]
+	at com.novare.natflax.NatflaxAdvance.Services.Impl.MovieServiceImpl.createMovie(MovieServiceImpl.java:61) ~[classes/:na]
+	at com.novare.natflax.NatflaxAdvance.Controllers.MovieController.createMovie(MovieController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-11T13:39:04.932+02:00  INFO 20352 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:39:04.992+02:00  INFO 20352 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-11T13:39:04.997+02:00  INFO 20352 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-11T13:39:19.109+02:00  INFO 20420 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.2 with PID 20420 (/Users/rashmonidey/Desktop/NatflaxAdvance/target/classes started by rashmonidey in /Users/rashmonidey/Desktop/NatflaxAdvance)
+2023-07-11T13:39:19.111+02:00  INFO 20420 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-07-11T13:39:19.138+02:00  INFO 20420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11T13:39:19.138+02:00  INFO 20420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11T13:39:19.457+02:00  INFO 20420 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11T13:39:19.485+02:00  INFO 20420 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+2023-07-11T13:39:19.769+02:00  INFO 20420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-07-11T13:39:19.776+02:00  INFO 20420 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-11T13:39:19.776+02:00  INFO 20420 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11T13:39:19.813+02:00  INFO 20420 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-11T13:39:19.813+02:00  INFO 20420 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 674 ms
+2023-07-11T13:39:19.893+02:00  INFO 20420 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11T13:39:19.914+02:00  INFO 20420 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11T13:39:19.915+02:00  INFO 20420 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-11T13:39:19.964+02:00  INFO 20420 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:39:20.039+02:00  INFO 20420 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11T13:39:20.048+02:00  INFO 20420 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-11T13:39:20.208+02:00  INFO 20420 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f44ca71
+2023-07-11T13:39:20.209+02:00  INFO 20420 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-11T13:39:20.327+02:00  INFO 20420 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:39:20.619+02:00  INFO 20420 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11T13:39:20.712+02:00  INFO 20420 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:39:20.918+02:00  WARN 20420 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-11T13:39:21.064+02:00  INFO 20420 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-11T13:39:21.076+02:00  INFO 20420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-07-11T13:39:21.081+02:00  INFO 20420 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.206 seconds (process running for 2.433)
+2023-07-11T13:39:32.464+02:00  INFO 20420 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11T13:39:32.468+02:00  INFO 20420 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-11T13:39:32.477+02:00  INFO 20420 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-07-11T13:39:32.561+02:00  INFO 20420 --- [http-nio-9090-exec-1] c.n.n.N.Controllers.MovieController      : User tried to create new item witth name: TestMov
+2023-07-11T13:39:32.562+02:00  INFO 20420 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
+2023-07-11T13:39:32.593+02:00  INFO 20420 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9090/files/1689075572592.png ---http://localhost:9090/files/1689075572593.png
+2023-07-11T13:39:32.650+02:00  INFO 20420 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : Movie is saved in database
+2023-07-11T13:40:44.831+02:00  WARN 20420 --- [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-07-11T13:41:21.219+02:00  INFO 20420 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:41:21.278+02:00  INFO 20420 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-11T13:41:21.282+02:00  INFO 20420 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-11T13:41:24.709+02:00  INFO 20585 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.2 with PID 20585 (/Users/rashmonidey/Desktop/NatflaxAdvance/target/classes started by rashmonidey in /Users/rashmonidey/Desktop/NatflaxAdvance)
+2023-07-11T13:41:24.711+02:00  INFO 20585 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-07-11T13:41:24.736+02:00  INFO 20585 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11T13:41:24.736+02:00  INFO 20585 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11T13:41:25.038+02:00  INFO 20585 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11T13:41:25.066+02:00  INFO 20585 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+2023-07-11T13:41:25.338+02:00  INFO 20585 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-07-11T13:41:25.343+02:00  INFO 20585 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-11T13:41:25.343+02:00  INFO 20585 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11T13:41:25.368+02:00  INFO 20585 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-11T13:41:25.369+02:00  INFO 20585 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 632 ms
+2023-07-11T13:41:25.436+02:00  INFO 20585 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11T13:41:25.457+02:00  INFO 20585 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11T13:41:25.457+02:00  INFO 20585 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-11T13:41:25.504+02:00  INFO 20585 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:41:25.564+02:00  INFO 20585 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11T13:41:25.573+02:00  INFO 20585 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-11T13:41:25.739+02:00  INFO 20585 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f80ea27
+2023-07-11T13:41:25.739+02:00  INFO 20585 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-11T13:41:25.852+02:00  INFO 20585 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:41:26.133+02:00  INFO 20585 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11T13:41:26.213+02:00  INFO 20585 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:41:26.417+02:00  WARN 20585 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-11T13:41:26.556+02:00  INFO 20585 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-11T13:41:26.568+02:00  INFO 20585 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-07-11T13:41:26.573+02:00  INFO 20585 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.08 seconds (process running for 2.301)
+2023-07-11T13:41:32.887+02:00  INFO 20585 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11T13:41:32.887+02:00  INFO 20585 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-11T13:41:32.888+02:00  INFO 20585 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-07-11T13:41:32.976+02:00  INFO 20585 --- [http-nio-9090-exec-2] c.n.n.N.Controllers.MovieController      : User tried to create new item witth name: TestMov
+2023-07-11T13:41:32.976+02:00  INFO 20585 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
+2023-07-11T13:41:33.008+02:00  INFO 20585 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9090/files/1689075693007.png ---http://localhost:9090/files/1689075693008.png
+2023-07-11T13:41:33.058+02:00  INFO 20585 --- [http-nio-9090-exec-2] c.n.n.N.Services.Impl.MovieServiceImpl   : Movie is saved in database
+2023-07-11T13:41:37.256+02:00  INFO 20585 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
+2023-07-11T13:41:37.274+02:00  INFO 20585 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9090/files/1689075697273.png ---http://localhost:9090/files/1689075697273.png
+2023-07-11T13:41:37.279+02:00  INFO 20585 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.MovieServiceImpl   : Movie is updated!
+2023-07-11T13:42:03.587+02:00  INFO 20585 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:42:03.649+02:00  INFO 20585 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-11T13:42:03.654+02:00  INFO 20585 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-11T13:45:43.780+02:00  INFO 20879 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.2 with PID 20879 (/Users/rashmonidey/Desktop/NatflaxAdvance/target/classes started by rashmonidey in /Users/rashmonidey/Desktop/NatflaxAdvance)
+2023-07-11T13:45:43.782+02:00  INFO 20879 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-07-11T13:45:43.806+02:00  INFO 20879 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11T13:45:43.807+02:00  INFO 20879 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11T13:45:44.101+02:00  INFO 20879 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11T13:45:44.134+02:00  INFO 20879 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
+2023-07-11T13:45:44.395+02:00  INFO 20879 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-07-11T13:45:44.399+02:00  INFO 20879 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-11T13:45:44.400+02:00  INFO 20879 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11T13:45:44.427+02:00  INFO 20879 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-11T13:45:44.427+02:00  INFO 20879 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 620 ms
+2023-07-11T13:45:44.494+02:00  INFO 20879 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11T13:45:44.514+02:00  INFO 20879 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11T13:45:44.515+02:00  INFO 20879 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-11T13:45:44.566+02:00  INFO 20879 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:45:44.641+02:00  INFO 20879 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11T13:45:44.652+02:00  INFO 20879 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-11T13:45:44.835+02:00  INFO 20879 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ce35bdc
+2023-07-11T13:45:44.835+02:00  INFO 20879 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-11T13:45:44.950+02:00  INFO 20879 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:45:45.231+02:00  INFO 20879 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11T13:45:45.304+02:00  INFO 20879 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:45:45.513+02:00  WARN 20879 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-11T13:45:45.652+02:00  INFO 20879 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-11T13:45:45.665+02:00  INFO 20879 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-07-11T13:45:45.671+02:00  INFO 20879 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.119 seconds (process running for 2.379)
+2023-07-11T13:45:51.005+02:00  INFO 20879 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11T13:45:51.007+02:00  INFO 20879 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-11T13:45:51.009+02:00  INFO 20879 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-07-11T13:45:51.100+02:00  INFO 20879 --- [http-nio-9090-exec-1] c.n.n.N.Controllers.MovieController      : User tried to create new item witth name: TestMov
+2023-07-11T13:45:51.101+02:00  INFO 20879 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
+2023-07-11T13:45:51.131+02:00  INFO 20879 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9090/files/1689075951129.png ---http://localhost:9090/files/1689075951130.png
+2023-07-11T13:45:51.178+02:00  INFO 20879 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : Movie is saved in database
+2023-07-11T13:45:54.783+02:00  INFO 20879 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
+2023-07-11T13:45:54.803+02:00  INFO 20879 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9090/files/1689075954802.png ---http://localhost:9090/files/1689075954803.png
+2023-07-11T13:45:54.824+02:00  INFO 20879 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.MovieServiceImpl   : Movie is updated!
+2023-07-11T13:46:18.071+02:00  INFO 20879 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:46:18.135+02:00  INFO 20879 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-11T13:46:18.141+02:00  INFO 20879 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-11T13:46:41.280+02:00  INFO 21007 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.2 with PID 21007 (/Users/rashmonidey/Desktop/NatflaxAdvance/target/classes started by rashmonidey in /Users/rashmonidey/Desktop/NatflaxAdvance)
+2023-07-11T13:46:41.282+02:00  INFO 21007 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-07-11T13:46:41.311+02:00  INFO 21007 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11T13:46:41.311+02:00  INFO 21007 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11T13:46:41.668+02:00  INFO 21007 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11T13:46:41.709+02:00  INFO 21007 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 4 JPA repository interfaces.
+2023-07-11T13:46:42.014+02:00  INFO 21007 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-07-11T13:46:42.021+02:00  INFO 21007 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-11T13:46:42.021+02:00  INFO 21007 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11T13:46:42.046+02:00  INFO 21007 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-11T13:46:42.046+02:00  INFO 21007 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 735 ms
+2023-07-11T13:46:42.124+02:00  INFO 21007 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11T13:46:42.149+02:00  INFO 21007 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11T13:46:42.150+02:00  INFO 21007 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-11T13:46:42.201+02:00  INFO 21007 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:46:42.274+02:00  INFO 21007 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11T13:46:42.284+02:00  INFO 21007 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-11T13:46:42.459+02:00  INFO 21007 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@381c15de
+2023-07-11T13:46:42.460+02:00  INFO 21007 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-11T13:46:42.587+02:00  INFO 21007 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T13:46:42.901+02:00  INFO 21007 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11T13:46:42.997+02:00  INFO 21007 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:46:43.214+02:00  WARN 21007 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-11T13:46:43.354+02:00  INFO 21007 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-11T13:46:43.369+02:00  INFO 21007 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-07-11T13:46:43.374+02:00  INFO 21007 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.307 seconds (process running for 2.571)
+2023-07-11T13:46:52.117+02:00  INFO 21007 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11T13:46:52.118+02:00  INFO 21007 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-11T13:46:52.119+02:00  INFO 21007 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-11T13:46:52.202+02:00  INFO 21007 --- [http-nio-9090-exec-1] c.n.n.N.Controllers.MovieController      : User tried to create new item witth name: TestMov
+2023-07-11T13:46:52.202+02:00  INFO 21007 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
+2023-07-11T13:46:52.236+02:00  INFO 21007 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9090/files/1689076012235.png ---http://localhost:9090/files/1689076012236.png
+2023-07-11T13:46:52.286+02:00  INFO 21007 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.MovieServiceImpl   : Movie is saved in database
+2023-07-11T13:47:15.057+02:00  INFO 21007 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.MovieServiceImpl   : Trying to convert base64 image and store it to filesystem..
+2023-07-11T13:47:15.077+02:00  INFO 21007 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.MovieServiceImpl   : image successfully stored, image url is: http://localhost:9090/files/1689076035076.png ---http://localhost:9090/files/1689076035077.png
+2023-07-11T13:47:15.087+02:00  INFO 21007 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.MovieServiceImpl   : Movie is updated!
+2023-07-11T13:47:39.406+02:00  INFO 21007 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T13:47:39.448+02:00  INFO 21007 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-11T13:47:39.452+02:00  INFO 21007 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

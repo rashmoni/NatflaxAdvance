@@ -7,14 +7,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class MovieDto {
-
-    private int movie_id;
+public class DocumentoryDto {
+    private int media_id;
     private String banner_url;
     private String thumbnail_url;
     private String title;
     private String video_code;
-    private String director;
+    private String narrator;
     private String summary;
     private int genre_id;
     private int rating;

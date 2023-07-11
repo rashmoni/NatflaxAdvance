@@ -6,14 +6,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="media")
+@Table(name="movie")
 @NoArgsConstructor
 @Getter
 @Setter
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int media_id;
+    private int movie_id;
 
     private String banner_url;
     private String thumbnail_url;
