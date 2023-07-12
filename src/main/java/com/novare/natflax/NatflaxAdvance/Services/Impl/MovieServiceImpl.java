@@ -1,10 +1,8 @@
 package com.novare.natflax.NatflaxAdvance.Services.Impl;
 
 import com.novare.natflax.NatflaxAdvance.Entity.Movie;
-import com.novare.natflax.NatflaxAdvance.Entity.User;
 import com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException;
 import com.novare.natflax.NatflaxAdvance.Payloads.MovieDto;
-import com.novare.natflax.NatflaxAdvance.Payloads.UserDto;
 import com.novare.natflax.NatflaxAdvance.Repositories.MovieRepo;
 import com.novare.natflax.NatflaxAdvance.Services.FileSystemStorageService;
 import com.novare.natflax.NatflaxAdvance.Services.IStorageService;
@@ -69,13 +67,12 @@ public class MovieServiceImpl implements MovieService {
     public void deleteMovie(Integer mid) {
         Movie movie = this.movieRepo.findById(mid).orElseThrow(() -> new ResourceNotFoundException("Movie", "Id", mid));
         this.movieRepo.delete(movie);
-
     }
     @Override
     public List<MovieDto> getAllMovies() {
         List<Movie> movies= this.movieRepo.findAll();
-        List<MovieDto> userDtos = movies.stream().map(user -> this.movieToDto(user)).collect(Collectors.toList());
-        return userDtos;
+        List<MovieDto> movieDtos = movies.stream().map(movie -> this.movieToDto(movie)).collect(Collectors.toList());
+        return movieDtos;
     }
     @Override
     public MovieDto getMovieById(Integer movieId) {

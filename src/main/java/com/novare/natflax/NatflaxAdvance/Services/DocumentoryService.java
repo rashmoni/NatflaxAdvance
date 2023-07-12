@@ -9,7 +9,7 @@ public interface DocumentoryService {
 
     void deleteDocumentory(Integer did);
 
-   List<DocumentoryDto> getAllDocumentory();
+   List<DocumentoryDto> getAllDocumentoies();
 
    DocumentoryDto getDocumentoryById(Integer documentoryId);
 

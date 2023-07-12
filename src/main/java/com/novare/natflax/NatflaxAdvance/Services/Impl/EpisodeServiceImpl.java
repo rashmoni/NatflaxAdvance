@@ -78,6 +78,40 @@ public class EpisodeServiceImpl implements EpisodeService {
     }
 
     @Override
+    public EpisodeDto updateEpisode(EpisodeDto episodeDto) {
+
+        Episode episode = episodeRepo.findById(episodeDto.getEpisodeID()).orElseThrow(()-> new ResourceNotFoundException("Episode","Episode id ", episodeDto.getEpisodeID()));
+
+        String logMessage;
+        if(episodeDto.getThumbnail_url() != null){
+            logMessage = "Trying to convert base64 image and store it to filesystem..";
+            log.info(logMessage);
+
+            String thumbDataBytes = FileUtil.getImageFromBase64(episodeDto.getThumbnail_url());
+            byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
+            String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
+            String baseURL = "http://localhost:9090/files/";
+            String complete_thumb_URL = baseURL + thumbURL;
+
+            logMessage = "image successfully stored, image url is: " + " ---" + complete_thumb_URL;
+            log.info(logMessage);
+            episodeDto.setThumbnail_url(complete_thumb_URL);
+        }
+
+
+        episode.setTitle(episodeDto.getTitle());
+        episode.setEpisode_no(episodeDto.getEpisode_no());
+        episode.setSeason_no(episodeDto.getSeason_no());
+        episode.setGenre_id(episodeDto.getGenre_id());
+        episode.setSummary(episodeDto.getSummary());
+        episode.setVideo_code(episodeDto.getVideo_code());
+        episode.setThumbnail_url(episodeDto.getThumbnail_url());
+
+        Episode newEpisode = this.episodeRepo.save(episode);
+        return this.modelMapper.map(newEpisode, EpisodeDto.class);
+    }
+
+    @Override
     public List<EpisodeDto> getEpisodeBySeries(Integer seriesId) {
 
         Series series = this.seriesRepo.findById(seriesId)
@@ -90,4 +124,11 @@ public class EpisodeServiceImpl implements EpisodeService {
 
         return allEpisodeBySeriesDtos;
     }
+
+    @Override
+    public void deleteEpisode(Integer episodeId) {
+            Episode episode = this.episodeRepo.findById(episodeId).orElseThrow(() -> new ResourceNotFoundException("Episode", "Id", episodeId));
+            this.episodeRepo.delete(episode);
+        }
 }
+

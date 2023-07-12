@@ -9,5 +9,9 @@ public interface EpisodeService {
 
     EpisodeDto createEpisode(EpisodeDto episodeDto, Integer seriesId);
 
+    EpisodeDto updateEpisode(EpisodeDto episodeDto);
+
     List<EpisodeDto> getEpisodeBySeries(Integer seriesId);
+
+    void deleteEpisode(Integer seriesId);
 }

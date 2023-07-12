@@ -60,9 +60,6 @@ public class DocumentoryServiceImpl implements DocumentoryService {
         return this.documentoryToDto(savedDocumentory);
     }
 
-
-
-
     @Override
     public void deleteDocumentory(Integer did) {
         Documentory documentory = this.documentoryRepo.findById(did).orElseThrow(() -> new ResourceNotFoundException("Documentory", "Id", did));
@@ -70,7 +67,7 @@ public class DocumentoryServiceImpl implements DocumentoryService {
     }
 
     @Override
-    public List<DocumentoryDto> getAllDocumentory() {
+    public List<DocumentoryDto> getAllDocumentoies() {
         List<Documentory> movies= this.documentoryRepo.findAll();
         List<DocumentoryDto> documentoryDtos = movies.stream().map(user -> this.documentoryToDto(user)).collect(Collectors.toList());
         return documentoryDtos;

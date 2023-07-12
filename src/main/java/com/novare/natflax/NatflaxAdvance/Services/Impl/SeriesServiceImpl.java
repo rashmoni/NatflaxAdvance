@@ -1,6 +1,7 @@
 package com.novare.natflax.NatflaxAdvance.Services.Impl;
 
 import com.novare.natflax.NatflaxAdvance.Entity.Series;
+import com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException;
 import com.novare.natflax.NatflaxAdvance.Payloads.SeriesDto;
 import com.novare.natflax.NatflaxAdvance.Repositories.SeriesRepo;
 import com.novare.natflax.NatflaxAdvance.Services.FileSystemStorageService;
@@ -13,11 +14,14 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @Log4j2
 public class SeriesServiceImpl implements SeriesService {
     @Autowired
-    private SeriesRepo SeriesRepo;
+    private SeriesRepo seriesRepo;
     @Autowired
     private ModelMapper modelMapper;
     @Autowired
@@ -51,12 +55,65 @@ public class SeriesServiceImpl implements SeriesService {
             seriesDto.setThumbnail_url(complete_thumb_URL);
         }
         Series series = this.dtoToSeries(seriesDto);
-        Series savedSeries = this.SeriesRepo.save(series);
+        Series savedSeries = this.seriesRepo.save(series);
         logMessage = "Series is saved in database";
         log.info(logMessage);
         return this.seriesToDto(savedSeries);
     }
 
+    @Override
+    public List<SeriesDto> getAllSeries() {
+        List<Series> series = this.seriesRepo.findAll();
+        List<SeriesDto> seriesDtos = series.stream().map(series1 -> this.seriesToDto(series1)).collect(Collectors.toList());
+        return seriesDtos;
+    }
+
+    @Override
+    public SeriesDto updateSeries(SeriesDto seriesDto) {
+        String logMessage;
+
+        Series series = this.seriesRepo.findByTitle(seriesDto.getTitle()).orElseThrow(() -> new ResourceNotFoundException("Series", "Id", 0));
+
+        Integer seriesID = series.getSeriesID();
+
+        if(seriesDto.getBanner_url() != null || seriesDto.getThumbnail_url() != null){
+            logMessage = "Trying to convert base64 image and store it to filesystem..";
+            log.info(logMessage);
+
+            String bannerDataBytes = FileUtil.getImageFromBase64(seriesDto.getBanner_url());
+            String thumbDataBytes = FileUtil.getImageFromBase64(seriesDto.getThumbnail_url());
+            byte [] bannerDecodedBytes = Base64.decodeBase64(bannerDataBytes);
+            byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
+            String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
+            String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
+            String baseURL = "http://localhost:9090/files/";
+            String complete_banner_URL = baseURL + bannerURL;
+            String complete_thumb_URL = baseURL + thumbURL;
+
+            logMessage = "image successfully stored, image url is: "+ complete_banner_URL + " ---" + complete_thumb_URL;
+            log.info(logMessage);
+            seriesDto.setBanner_url(complete_banner_URL);
+            seriesDto.setThumbnail_url(complete_thumb_URL);
+        }
+        series = this.dtoToSeries(seriesDto);
+        series.setSeriesID(seriesID);
+        Series savedSeries = this.seriesRepo.save(series);
+        logMessage = "Series is updated!";
+        log.info(logMessage);
+        return this.seriesToDto(savedSeries);
+    }
+
+    @Override
+    public SeriesDto getSeriesById(Integer seriesID) {
+        Series series = this.seriesRepo.findById(seriesID).orElseThrow(() -> new ResourceNotFoundException("Series", "Id", seriesID));
+        return this.seriesToDto(series);
+    }
+
+    @Override
+    public void deleteSeries(Integer seriesID) {
+        Series series = this.seriesRepo.findById(seriesID).orElseThrow(() -> new ResourceNotFoundException("Series", "Id", seriesID));
+        this.seriesRepo.delete(series);
+    }
 
     private Series dtoToSeries(SeriesDto seriesDto) {
         Series series = this.modelMapper.map(seriesDto, Series.class);
