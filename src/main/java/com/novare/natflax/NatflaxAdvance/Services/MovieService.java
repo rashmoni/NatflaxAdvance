@@ -1,8 +1,6 @@
 package com.novare.natflax.NatflaxAdvance.Services;
 
 import com.novare.natflax.NatflaxAdvance.Payloads.MovieDto;
-
-
 import java.util.List;
 
 public interface MovieService {

@@ -10,6 +10,8 @@ import lombok.Setter;
 public class MovieDto {
 
     private int movie_id;
+
+    private int media_type_id = 1;
     private String banner_url;
     private String thumbnail_url;
     private String title;

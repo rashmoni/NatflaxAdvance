@@ -1,28 +1,21 @@
-package com.novare.natflax.NatflaxAdvance.Entity;
+package com.novare.natflax.NatflaxAdvance.Payloads;
 
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
-@Table(name="movie")
 @NoArgsConstructor
 @Getter
 @Setter
-public class Movie {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int movie_id;
-
+public class MediaDto {
     private int media_type_id;
     private String banner_url;
     private String thumbnail_url;
     private String title;
     private String video_code;
     private String director;
+    private String narrator;
     private String summary;
     private int genre_id;
     private int rating;
-
 }
