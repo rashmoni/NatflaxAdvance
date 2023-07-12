@@ -112,3 +112,307 @@
 2023-07-12T12:27:14.844+02:00  INFO 12575 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-07-12T12:27:14.890+02:00  INFO 12575 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-07-12T12:27:14.894+02:00  INFO 12575 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-12T12:31:05.201+02:00  INFO 13059 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.7 with PID 13059 (/Users/prasanthdey/Desktop/NatflaxAdvance/target/classes started by prasanthdey in /Users/prasanthdey/Desktop/NatflaxAdvance)
+2023-07-12T12:31:05.202+02:00  INFO 13059 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-07-12T12:31:05.226+02:00  INFO 13059 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-12T12:31:05.227+02:00  INFO 13059 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-12T12:31:05.537+02:00  INFO 13059 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-12T12:31:05.576+02:00  INFO 13059 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 5 JPA repository interfaces.
+2023-07-12T12:31:05.883+02:00  INFO 13059 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-07-12T12:31:05.889+02:00  INFO 13059 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-12T12:31:05.889+02:00  INFO 13059 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-12T12:31:05.918+02:00  INFO 13059 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-12T12:31:05.919+02:00  INFO 13059 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 692 ms
+2023-07-12T12:31:06.000+02:00  INFO 13059 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-12T12:31:06.020+02:00  INFO 13059 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-12T12:31:06.021+02:00  INFO 13059 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-12T12:31:06.071+02:00  INFO 13059 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-12T12:31:06.135+02:00  INFO 13059 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-12T12:31:06.143+02:00  INFO 13059 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-12T12:31:06.305+02:00  INFO 13059 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64895bd7
+2023-07-12T12:31:06.307+02:00  INFO 13059 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-12T12:31:06.457+02:00  INFO 13059 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-12T12:31:06.791+02:00  INFO 13059 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-12T12:31:06.861+02:00  INFO 13059 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-12T12:31:07.110+02:00  WARN 13059 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-12T12:31:07.264+02:00  INFO 13059 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-12T12:31:07.278+02:00  INFO 13059 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-07-12T12:31:07.284+02:00  INFO 13059 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.285 seconds (process running for 2.493)
+2023-07-12T12:31:29.149+02:00  INFO 13059 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-12T12:31:29.150+02:00  INFO 13059 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-12T12:31:29.150+02:00  INFO 13059 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-07-12T12:31:29.218+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.C.DocumentariesController        : User tried to create new item with name: akkjhhhhhhh
+2023-07-12T12:31:29.218+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.S.Impl.DocumentoryServiceImpl    : Trying to convert base64 image and store it to filesystem..
+2023-07-12T12:31:29.243+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.S.Impl.DocumentoryServiceImpl    : image successfully stored, image url is: http://localhost:9090/files/1689157889242.png ---http://localhost:9090/files/1689157889243.png
+2023-07-12T12:31:29.282+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.S.Impl.DocumentoryServiceImpl    : Documentory is saved in database
+2023-07-12T12:32:42.880+02:00  INFO 13059 --- [http-nio-9090-exec-5] c.n.n.N.C.DocumentariesController        : User tried to create new item with name: GoodDocu2
+2023-07-12T12:32:42.880+02:00  INFO 13059 --- [http-nio-9090-exec-5] c.n.n.N.S.Impl.DocumentoryServiceImpl    : Trying to convert base64 image and store it to filesystem..
+2023-07-12T12:32:42.900+02:00  INFO 13059 --- [http-nio-9090-exec-5] c.n.n.N.S.Impl.DocumentoryServiceImpl    : image successfully stored, image url is: http://localhost:9090/files/1689157962899.png ---http://localhost:9090/files/1689157962900.png
+2023-07-12T12:32:42.907+02:00  INFO 13059 --- [http-nio-9090-exec-5] c.n.n.N.S.Impl.DocumentoryServiceImpl    : Documentory is saved in database
+2023-07-12T12:33:05.221+02:00  INFO 13059 --- [http-nio-9090-exec-6] c.n.n.N.Controllers.FilesController      : Image file processed
+2023-07-12T12:34:44.897+02:00  WARN 13059 --- [http-nio-9090-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException: Documentory not found with Id : 3]
+2023-07-12T12:35:35.173+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.C.DocumentariesController        : User tried to create new item with name: GoodDocu2
+2023-07-12T12:35:35.173+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.S.Impl.DocumentoryServiceImpl    : Trying to convert base64 image and store it to filesystem..
+2023-07-12T12:35:35.190+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.S.Impl.DocumentoryServiceImpl    : image successfully stored, image url is: http://localhost:9090/files/1689158135189.png ---http://localhost:9090/files/1689158135189.png
+2023-07-12T12:35:35.195+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.S.Impl.DocumentoryServiceImpl    : Documentory is saved in database
+2023-07-12T12:35:40.432+02:00  WARN 13059 --- [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException: Documentory not found with Id : 2]
+2023-07-12T12:35:45.690+02:00  WARN 13059 --- [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException: Documentory not found with Id : 4]
+2023-07-12T12:36:32.574+02:00  INFO 13059 --- [http-nio-9090-exec-5] c.n.n.N.S.Impl.DocumentoryServiceImpl    : Trying to convert base64 image and store it to filesystem..
+2023-07-12T12:36:32.590+02:00  INFO 13059 --- [http-nio-9090-exec-5] c.n.n.N.S.Impl.DocumentoryServiceImpl    : image successfully stored, image url is: http://localhost:9090/files/1689158192589.png ---http://localhost:9090/files/1689158192590.png
+2023-07-12T12:36:32.597+02:00  INFO 13059 --- [http-nio-9090-exec-5] c.n.n.N.S.Impl.DocumentoryServiceImpl    : Documentory is updated!
+2023-07-12T12:37:37.000+02:00  INFO 13059 --- [http-nio-9090-exec-7] c.n.n.N.S.Impl.DocumentoryServiceImpl    : Trying to convert base64 image and store it to filesystem..
+2023-07-12T12:37:37.016+02:00  INFO 13059 --- [http-nio-9090-exec-7] c.n.n.N.S.Impl.DocumentoryServiceImpl    : image successfully stored, image url is: http://localhost:9090/files/1689158257015.png ---http://localhost:9090/files/1689158257016.png
+2023-07-12T12:37:37.020+02:00  INFO 13059 --- [http-nio-9090-exec-7] c.n.n.N.S.Impl.DocumentoryServiceImpl    : Documentory is updated!
+2023-07-12T12:42:20.141+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.Controllers.SeriesController     : User tried to create new item with name: TestSeries1
+2023-07-12T12:42:20.141+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.SeriesServiceImpl  : Trying to convert base64 image and store it to filesystem..
+2023-07-12T12:42:20.155+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.SeriesServiceImpl  : image successfully stored, image url is: http://localhost:9090/files/1689158540154.png ---http://localhost:9090/files/1689158540155.png
+2023-07-12T12:42:20.170+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.Services.Impl.SeriesServiceImpl  : Series is saved in database
+2023-07-12T12:43:21.780+02:00  INFO 13059 --- [http-nio-9090-exec-4] c.n.n.N.Controllers.SeriesController     : User tried to create new item with name: TestSeries2
+2023-07-12T12:43:21.780+02:00  INFO 13059 --- [http-nio-9090-exec-4] c.n.n.N.Services.Impl.SeriesServiceImpl  : Trying to convert base64 image and store it to filesystem..
+2023-07-12T12:43:21.796+02:00  INFO 13059 --- [http-nio-9090-exec-4] c.n.n.N.Services.Impl.SeriesServiceImpl  : image successfully stored, image url is: http://localhost:9090/files/1689158601795.png ---http://localhost:9090/files/1689158601796.png
+2023-07-12T12:43:21.820+02:00  INFO 13059 --- [http-nio-9090-exec-4] c.n.n.N.Services.Impl.SeriesServiceImpl  : Series is saved in database
+2023-07-12T12:45:02.432+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.Controllers.SeriesController     : User tried to create new item with name: TestSeries2
+2023-07-12T12:45:02.433+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.Services.Impl.SeriesServiceImpl  : Trying to convert base64 image and store it to filesystem..
+2023-07-12T12:45:02.448+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.Services.Impl.SeriesServiceImpl  : image successfully stored, image url is: http://localhost:9090/files/1689158702447.png ---http://localhost:9090/files/1689158702447.png
+2023-07-12T12:45:02.451+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.Services.Impl.SeriesServiceImpl  : Series is saved in database
+2023-07-12T12:54:01.434+02:00  INFO 13059 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.SeriesServiceImpl  : Trying to convert base64 image and store it to filesystem..
+2023-07-12T12:54:01.451+02:00  INFO 13059 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.SeriesServiceImpl  : image successfully stored, image url is: http://localhost:9090/files/1689159241450.png ---http://localhost:9090/files/1689159241451.png
+2023-07-12T12:54:01.459+02:00  INFO 13059 --- [http-nio-9090-exec-3] c.n.n.N.Services.Impl.SeriesServiceImpl  : Series is updated!
+2023-07-12T12:55:59.687+02:00  INFO 13059 --- [http-nio-9090-exec-8] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: akkjhhhhhhh
+2023-07-12T12:55:59.687+02:00  INFO 13059 --- [http-nio-9090-exec-8] c.n.n.N.S.Impl.EpisodeServiceImpl        : Trying to convert base64 image and store it to filesystem..
+2023-07-12T12:55:59.700+02:00  INFO 13059 --- [http-nio-9090-exec-8] c.n.n.N.S.Impl.EpisodeServiceImpl        : image successfully stored, image url is:  ---http://localhost:9090/files/1689159359699.png
+2023-07-12T12:57:58.581+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: Bihar diaries episode2
+2023-07-12T12:57:58.581+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.S.Impl.EpisodeServiceImpl        : Trying to convert base64 image and store it to filesystem..
+2023-07-12T12:57:58.594+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.S.Impl.EpisodeServiceImpl        : image successfully stored, image url is:  ---http://localhost:9090/files/1689159478594.png
+2023-07-12T12:58:47.381+02:00  WARN 13059 --- [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-07-12T12:58:56.280+02:00  INFO 13059 --- [http-nio-9090-exec-4] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: 
+2023-07-12T13:00:09.723+02:00  INFO 13059 --- [http-nio-9090-exec-7] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: Stockholm diaries episode 2
+2023-07-12T13:00:09.723+02:00  INFO 13059 --- [http-nio-9090-exec-7] c.n.n.N.S.Impl.EpisodeServiceImpl        : Trying to convert base64 image and store it to filesystem..
+2023-07-12T13:00:09.733+02:00  INFO 13059 --- [http-nio-9090-exec-7] c.n.n.N.S.Impl.EpisodeServiceImpl        : image successfully stored, image url is:  ---http://localhost:9090/files/1689159609733.png
+2023-07-12T13:00:09.737+02:00  WARN 13059 --- [http-nio-9090-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException: Series not found with series id  : 2]
+2023-07-12T13:00:28.556+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: Stockholm diaries episode 2
+2023-07-12T13:00:28.556+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.S.Impl.EpisodeServiceImpl        : Trying to convert base64 image and store it to filesystem..
+2023-07-12T13:00:28.573+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.S.Impl.EpisodeServiceImpl        : image successfully stored, image url is:  ---http://localhost:9090/files/1689159628572.png
+2023-07-12T13:00:32.504+02:00  INFO 13059 --- [http-nio-9090-exec-10] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: 
+2023-07-12T13:00:39.647+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: 
+2023-07-12T13:00:45.275+02:00  INFO 13059 --- [http-nio-9090-exec-2] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: 
+2023-07-12T13:02:05.362+02:00  INFO 13059 --- [http-nio-9090-exec-5] c.n.n.N.Controllers.EpisodeController    : User tried to delete an Episode
+2023-07-12T13:02:19.477+02:00  INFO 13059 --- [http-nio-9090-exec-6] c.n.n.N.Controllers.EpisodeController    : User tried to delete an Episode
+2023-07-12T13:02:19.486+02:00  WARN 13059 --- [http-nio-9090-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException: Episode not found with Id : 1]
+2023-07-12T13:02:27.037+02:00  INFO 13059 --- [http-nio-9090-exec-7] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: 
+2023-07-12T13:04:43.534+02:00  INFO 13059 --- [http-nio-9090-exec-9] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: 
+2023-07-12T13:05:25.013+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: akkjhhhhhhh
+2023-07-12T13:05:25.013+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.S.Impl.EpisodeServiceImpl        : Trying to convert base64 image and store it to filesystem..
+2023-07-12T13:05:25.020+02:00  INFO 13059 --- [http-nio-9090-exec-1] c.n.n.N.S.Impl.EpisodeServiceImpl        : image successfully stored, image url is:  ---http://localhost:9090/files/1689159925020.png
+2023-07-12T13:06:00.594+02:00  INFO 13059 --- [http-nio-9090-exec-2] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: Stockholm diaries episode 2
+2023-07-12T13:06:00.603+02:00 ERROR 13059 --- [http-nio-9090-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null] with root cause
+
+java.lang.IllegalArgumentException: The given id must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:204) ~[spring-core-6.0.10.jar:6.0.10]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById(SimpleJpaRepository.java:301) ~[spring-data-jpa-3.1.1.jar:3.1.1]
+	at jdk.internal.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:72) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.10.jar:6.0.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.10.jar:6.0.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.10.jar:6.0.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.10.jar:6.0.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164) ~[spring-data-jpa-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:244) ~[spring-aop-6.0.10.jar:6.0.10]
+	at jdk.proxy4/jdk.proxy4.$Proxy126.findById(Unknown Source) ~[na:na]
+	at com.novare.natflax.NatflaxAdvance.Services.Impl.EpisodeServiceImpl.updateEpisode(EpisodeServiceImpl.java:83) ~[classes/:na]
+	at com.novare.natflax.NatflaxAdvance.Controllers.EpisodeController.updateEpisode(EpisodeController.java:37) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-12T13:06:24.695+02:00  INFO 13059 --- [http-nio-9090-exec-4] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: Stockholm diaries episode 2
+2023-07-12T13:06:24.701+02:00 ERROR 13059 --- [http-nio-9090-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null] with root cause
+
+java.lang.IllegalArgumentException: The given id must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:204) ~[spring-core-6.0.10.jar:6.0.10]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById(SimpleJpaRepository.java:301) ~[spring-data-jpa-3.1.1.jar:3.1.1]
+	at jdk.internal.reflect.GeneratedMethodAccessor67.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:72) ~[spring-data-commons-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.10.jar:6.0.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.10.jar:6.0.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.10.jar:6.0.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.10.jar:6.0.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164) ~[spring-data-jpa-3.1.1.jar:3.1.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.10.jar:6.0.10]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:244) ~[spring-aop-6.0.10.jar:6.0.10]
+	at jdk.proxy4/jdk.proxy4.$Proxy126.findById(Unknown Source) ~[na:na]
+	at com.novare.natflax.NatflaxAdvance.Services.Impl.EpisodeServiceImpl.updateEpisode(EpisodeServiceImpl.java:83) ~[classes/:na]
+	at com.novare.natflax.NatflaxAdvance.Controllers.EpisodeController.updateEpisode(EpisodeController.java:37) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-12T13:08:16.637+02:00  INFO 13059 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-12T13:08:16.641+02:00  INFO 13059 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-12T13:08:16.647+02:00  INFO 13059 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-12T13:08:19.012+02:00  INFO 14724 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Starting NatflaxAdvanceApplication using Java 17.0.7 with PID 14724 (/Users/prasanthdey/Desktop/NatflaxAdvance/target/classes started by prasanthdey in /Users/prasanthdey/Desktop/NatflaxAdvance)
+2023-07-12T13:08:19.013+02:00  INFO 14724 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-07-12T13:08:19.038+02:00  INFO 14724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-12T13:08:19.039+02:00  INFO 14724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-12T13:08:19.397+02:00  INFO 14724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-12T13:08:19.439+02:00  INFO 14724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 5 JPA repository interfaces.
+2023-07-12T13:08:19.796+02:00  INFO 14724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-07-12T13:08:19.802+02:00  INFO 14724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-12T13:08:19.802+02:00  INFO 14724 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-12T13:08:19.833+02:00  INFO 14724 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-12T13:08:19.833+02:00  INFO 14724 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 793 ms
+2023-07-12T13:08:19.915+02:00  INFO 14724 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-12T13:08:19.940+02:00  INFO 14724 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-12T13:08:19.941+02:00  INFO 14724 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-12T13:08:20.002+02:00  INFO 14724 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-12T13:08:20.077+02:00  INFO 14724 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-12T13:08:20.085+02:00  INFO 14724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-12T13:08:20.264+02:00  INFO 14724 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@791ad2c0
+2023-07-12T13:08:20.265+02:00  INFO 14724 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-12T13:08:20.407+02:00  INFO 14724 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-12T13:08:20.766+02:00  INFO 14724 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-12T13:08:20.812+02:00  INFO 14724 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-12T13:08:21.108+02:00  WARN 14724 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-12T13:08:21.278+02:00  INFO 14724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-12T13:08:21.300+02:00  INFO 14724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-07-12T13:08:21.306+02:00  INFO 14724 --- [restartedMain] c.n.n.N.NatflaxAdvanceApplication        : Started NatflaxAdvanceApplication in 2.509 seconds (process running for 3.073)
+2023-07-12T13:08:25.198+02:00  INFO 14724 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-12T13:08:25.198+02:00  INFO 14724 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-12T13:08:25.199+02:00  INFO 14724 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-12T13:08:25.271+02:00  INFO 14724 --- [http-nio-9090-exec-1] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: Stockholm diaries episode 2
+2023-07-12T13:09:01.112+02:00  WARN 14724 --- [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException: Episode not found with Episode id  : 1]
+2023-07-12T13:09:33.582+02:00  INFO 14724 --- [http-nio-9090-exec-3] c.n.n.N.Controllers.EpisodeController    : User tried to create new item with name: Stockholm diaries episode 2
+2023-07-12T13:09:33.593+02:00  INFO 14724 --- [http-nio-9090-exec-3] c.n.n.N.S.Impl.EpisodeServiceImpl        : Trying to convert base64 image and store it to filesystem..
+2023-07-12T13:09:33.609+02:00  INFO 14724 --- [http-nio-9090-exec-3] c.n.n.N.S.Impl.EpisodeServiceImpl        : image successfully stored, image url is:  ---http://localhost:9090/files/1689160173607.png
+2023-07-12T13:09:44.533+02:00  INFO 14724 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-12T13:09:44.536+02:00  INFO 14724 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-12T13:09:44.543+02:00  INFO 14724 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -10,7 +10,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class EpisodeDto {
-    @JsonIgnore
     private Integer episodeID;
     private String thumbnail_url;
     private String title;
