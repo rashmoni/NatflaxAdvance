@@ -11,7 +11,7 @@ public class MovieDto {
 
     private int movie_id;
 
-    private int media_type_id = 1;
+    private int media_type_id = 2;
     private String banner_url;
     private String thumbnail_url;
     private String title;

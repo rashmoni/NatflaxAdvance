@@ -16,6 +16,7 @@ public class Documentory {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int document_id;
 
+    private int media_type_id;
     private String banner_url;
     private String thumbnail_url;
     private String title;

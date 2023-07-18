@@ -19,6 +19,7 @@ public class Series {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int seriesID;
 
+    private int media_type_id;
     private String banner_url;
     private String thumbnail_url;
     private String title;

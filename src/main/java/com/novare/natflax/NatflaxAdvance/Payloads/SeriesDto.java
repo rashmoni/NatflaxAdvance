@@ -10,6 +10,8 @@ import lombok.Setter;
 @Setter
 public class SeriesDto {
     private int seriesID;
+
+    private int media_type_id = 1;
     private String banner_url;
     private String thumbnail_url;
     private String title;

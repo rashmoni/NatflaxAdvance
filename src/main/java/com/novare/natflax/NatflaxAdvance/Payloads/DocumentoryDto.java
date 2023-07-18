@@ -9,6 +9,8 @@ import lombok.Setter;
 @Setter
 public class DocumentoryDto {
     private int document_id;
+
+    private int media_type_id = 3;
     private String banner_url;
     private String thumbnail_url;
     private String title;
