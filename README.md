@@ -1,4 +1,4 @@
-# Natflix Advanced Project
+# Natflax Advanced Project
 
 
 ## Table of contents
@@ -29,29 +29,24 @@ Project is created with:
 
 ## Project mamnagement Documents
 Project Management Documents:
+## Project mamnagement Documents
+Project Management Documents:
+- [Database Diagram](https://drive.google.com/file/d/1G7Ai04dVL8ZAp-2fbyTzzKNx12do5LI3/view?usp=drive_link)
+- [Requirement Specification](https://docs.google.com/document/d/1z1jMhBZlmwD3MvR0l2sGitq5zrWrEqMx/edit?usp=drive_link&ouid=117007950905389642176&rtpof=true&sd=true)
+- [Product Backlog](https://docs.google.com/spreadsheets/d/19rZRvJd3akL5E4EXWjOPaX7oj5EhXkwOpPfDQcjLiog/edit?usp=drive_link)
 
 
 ## Run
 To run this application do the following steps.
-1. git clone https://github.com/rashmoni/Natflix
-2. cd Natflix
+1. git clone https://github.com/rashmoni/NatflaxAdvance
+2. cd NatflaxAdvance
 3. mvn install
-4. docker compose up
-5. Access the application on port 8080.
-
-NOTE -  Due to AWS security requirement, I have to disabled the access key id of the S3 bucket.
-This means that update, delete and add new content features will not work. Please ping me before testing the application and I will provide separate access key which you can place in application.properties file and access use al the features.
-
-This one is inactive, I will provide new one separately -
-
-
+4. Access the application on port 9090.
 
 
 ## Folder structure -
-/Natflix
+/NatflixAdvance
  - src 
- - docker-compose.yml
- - Dockerfile
  - pom.xml
 
 
