@@ -7,8 +7,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class DocumentoryDto {
-    private int document_id;
+public class DocumentaryDto {
+    private int id;
 
     private int media_type_id = 3;
     private String banner_url;

@@ -17,7 +17,7 @@ public class Series {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int seriesID;
+    private int id;
 
     private int media_type_id;
     private String banner_url;

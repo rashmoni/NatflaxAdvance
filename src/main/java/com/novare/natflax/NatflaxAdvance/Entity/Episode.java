@@ -13,7 +13,7 @@ import lombok.Setter;
 public class Episode {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int episodeID;
+    private int id;
 
     private String thumbnail_url;
     private String title;

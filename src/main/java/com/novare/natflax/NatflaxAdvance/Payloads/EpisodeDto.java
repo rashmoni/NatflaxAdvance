@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class EpisodeDto {
-    private Integer episodeID;
+    private Integer id;
     private String thumbnail_url;
     private String title;
     private String video_code;

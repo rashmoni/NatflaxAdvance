@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 public class MovieDto {
 
-    private int movie_id;
+    private int id;
 
     private int media_type_id = 2;
     private String banner_url;

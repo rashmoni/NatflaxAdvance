@@ -1,6 +1,8 @@
 package com.novare.natflax.NatflaxAdvance.Services;
 
 import com.novare.natflax.NatflaxAdvance.Payloads.MovieDto;
+import org.json.simple.JSONObject;
+
 import java.util.List;
 
 public interface MovieService {
@@ -12,5 +14,5 @@ public interface MovieService {
 
     MovieDto getMovieById(Integer movieId);
 
-    MovieDto updateMovie(MovieDto movieDto);
+    MovieDto updateMovie(JSONObject payload);
 }

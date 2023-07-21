@@ -11,10 +11,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Documentory {
+public class Documentary {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int document_id;
+    private int id;
 
     private int media_type_id;
     private String banner_url;

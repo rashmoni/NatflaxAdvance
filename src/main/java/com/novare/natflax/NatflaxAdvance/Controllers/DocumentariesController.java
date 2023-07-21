@@ -1,8 +1,8 @@
 package com.novare.natflax.NatflaxAdvance.Controllers;
 
 import com.novare.natflax.NatflaxAdvance.Payloads.ApiResponse;
-import com.novare.natflax.NatflaxAdvance.Payloads.DocumentoryDto;
-import com.novare.natflax.NatflaxAdvance.Services.DocumentoryService;
+import com.novare.natflax.NatflaxAdvance.Payloads.DocumentaryDto;
+import com.novare.natflax.NatflaxAdvance.Services.DocumentaryService;
 import jakarta.validation.Valid;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,41 +14,42 @@ import java.util.List;
 
 @RestController
 @Log4j2
-@RequestMapping("/api/documentories")
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/api/documentaries")
 public class DocumentariesController {
 
     @Autowired
-    private DocumentoryService documentoryService;
+    private DocumentaryService documentaryService;
 
 
-    @PostMapping("/")
-    public ResponseEntity<DocumentoryDto> createDocumentary(@Valid @RequestBody DocumentoryDto documentoryDto) {
+    @PostMapping("/create")
+    public ResponseEntity<DocumentaryDto> createDocumentary(@Valid @RequestBody DocumentaryDto documentoryDto) {
         String message = "User tried to create new item with name: " + documentoryDto.getTitle();
         log.info(message);
 
-        DocumentoryDto createdDocumentoryDto = this.documentoryService.createDocumentory(documentoryDto);
-        return new ResponseEntity<>(createdDocumentoryDto, HttpStatus.CREATED);
+        DocumentaryDto createdDocumentaryDto = this.documentaryService.createDocumentary(documentoryDto);
+        return new ResponseEntity<>(createdDocumentaryDto, HttpStatus.CREATED);
     }
 
     @GetMapping("/")
-    public ResponseEntity<List<DocumentoryDto>> getAllDocumentory(){
-        return ResponseEntity.ok(this.documentoryService.getAllDocumentoies());
+    public ResponseEntity<List<DocumentaryDto>> getAllDocumentary(){
+        return ResponseEntity.ok(this.documentaryService.getAllDocumentaries());
     }
 
-    @PutMapping("/")
-    public ResponseEntity<DocumentoryDto> updateDocumentory(@Valid @RequestBody DocumentoryDto documentoryDto){
-        return ResponseEntity.ok(this.documentoryService.updateDocumentory(documentoryDto));
+    @PutMapping("/update")
+    public ResponseEntity<DocumentaryDto> updateDocumentary(@Valid @RequestBody DocumentaryDto documentoryDto){
+        return ResponseEntity.ok(this.documentaryService.updateDocumentary(documentoryDto));
     }
 
-    @GetMapping("/{documentoryId}")
-    public ResponseEntity<DocumentoryDto> getSingleDocumentory(@PathVariable Integer documentoryId){
-        return ResponseEntity.ok(this.documentoryService.getDocumentoryById(documentoryId));
+    @GetMapping("/{documentaryId}")
+    public ResponseEntity<DocumentaryDto> getSingleDocumentary(@PathVariable Integer documentoryId){
+        return ResponseEntity.ok(this.documentaryService.getDocumentaryById(documentoryId));
     }
 
-    @DeleteMapping("/{documentoryId}")
-    public ResponseEntity<ApiResponse> deleteDocumentory(@PathVariable("documentoryId") Integer did){
-        documentoryService.deleteDocumentory(did);
-        return new ResponseEntity(new ApiResponse("Documentory deleted successfully",true), HttpStatus.OK);
+    @DeleteMapping("/delete/{documentaryId}")
+    public ResponseEntity<ApiResponse> deleteDocumentary(@PathVariable("documentaryId") Integer dId){
+        documentaryService.deleteDocumentary(dId);
+        return new ResponseEntity(new ApiResponse("Documentary deleted successfully",true), HttpStatus.OK);
     }
 
 

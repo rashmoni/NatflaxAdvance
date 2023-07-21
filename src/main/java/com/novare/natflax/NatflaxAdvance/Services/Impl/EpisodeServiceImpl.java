@@ -80,7 +80,7 @@ public class EpisodeServiceImpl implements EpisodeService {
     @Override
     public EpisodeDto updateEpisode(EpisodeDto episodeDto) {
 
-        Episode episode = episodeRepo.findById(episodeDto.getEpisodeID()).orElseThrow(()-> new ResourceNotFoundException("Episode","Episode id ", episodeDto.getEpisodeID()));
+        Episode episode = episodeRepo.findById(episodeDto.getId()).orElseThrow(()-> new ResourceNotFoundException("Episode","Episode id ", episodeDto.getId()));
 
         String logMessage;
         if(episodeDto.getThumbnail_url() != null){

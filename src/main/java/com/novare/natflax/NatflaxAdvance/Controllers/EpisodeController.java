@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @Log4j2
 @RequestMapping("/api")
 public class EpisodeController {
@@ -19,7 +20,7 @@ public class EpisodeController {
     @Autowired
     private EpisodeService episodeService;
 
-    @PostMapping("/{seriesId}/episode")
+    @PostMapping("/episode/{seriesId}")
     public ResponseEntity<EpisodeDto> createEpisode(@Valid @RequestBody EpisodeDto episodeDto, @PathVariable Integer seriesId) {
         String message = "User tried to create new item with name: " + episodeDto.getTitle();
         log.info(message);
@@ -38,7 +39,7 @@ public class EpisodeController {
     }
 
 
-    @GetMapping("/{seriesId}/episodes")
+    @GetMapping("/episodes/{seriesId}")
     public ResponseEntity<List<EpisodeDto>> getEpisodeBySeries(@PathVariable Integer seriesId) {
         String message = "User tried to create new item with name: ";
         log.info(message);

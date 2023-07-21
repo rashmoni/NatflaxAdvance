@@ -10,16 +10,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import org.json.simple.JSONObject;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping("/api/movie")
+@RequestMapping("/api/movies")
 @Log4j2
 public class MovieController {
     @Autowired
     private MovieService movieService;
 
-    @PostMapping("/")
+    @CrossOrigin(origins = "http://localhost:3000/*")
+    @PostMapping("/create")
     public ResponseEntity<MovieDto> createMovie(@Valid @RequestBody MovieDto movieDto) {
         String message = "User tried to create new item with name: " + movieDto.getTitle();
         log.info(message);
@@ -33,16 +35,17 @@ public class MovieController {
         return ResponseEntity.ok(this.movieService.getAllMovies());
     }
 
-    @PutMapping("/")
-    public ResponseEntity<MovieDto> updateMovie(@Valid @RequestBody MovieDto movieDto){
-        return ResponseEntity.ok(this.movieService.updateMovie(movieDto));
+    @CrossOrigin(origins = "http://localhost:3000/*")
+    @PutMapping("/update")
+    public ResponseEntity<MovieDto> updateMovie(@RequestBody JSONObject payload){
+        return ResponseEntity.ok(this.movieService.updateMovie(payload));
     }
 
     @GetMapping("/{movieId}")
     public ResponseEntity<MovieDto> getSingleMovie(@PathVariable Integer movieId){
         return ResponseEntity.ok(this.movieService.getMovieById(movieId));
     }
-    @DeleteMapping("/{movieId}")
+    @DeleteMapping("/delete/{movieId}")
     public ResponseEntity<ApiResponse> deleteMovie(@PathVariable("movieId") Integer movieId){
         movieService.deleteMovie(movieId);
         return new ResponseEntity(new ApiResponse("Movie deleted successfully",true), HttpStatus.OK);

@@ -13,7 +13,7 @@ import lombok.Setter;
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int movie_id;
+    private int id;
 
     private int media_type_id;
     private String banner_url;

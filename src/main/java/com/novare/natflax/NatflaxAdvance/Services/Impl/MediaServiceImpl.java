@@ -1,6 +1,6 @@
 package com.novare.natflax.NatflaxAdvance.Services.Impl;
 
-import com.novare.natflax.NatflaxAdvance.Entity.Documentory;
+import com.novare.natflax.NatflaxAdvance.Entity.Documentary;
 import com.novare.natflax.NatflaxAdvance.Entity.Movie;
 import com.novare.natflax.NatflaxAdvance.Entity.Series;
 import com.novare.natflax.NatflaxAdvance.Payloads.MediaDto;
@@ -34,7 +34,7 @@ public class MediaServiceImpl implements MediaService {
     public List<MediaDto> getAllMedia() {
         List<Movie> allMovies = this.movieRepo.findAll();
         List<Series> allSeries = this.seriesRepo.findAll();
-        List<Documentory> allDocumentaries = this.documentoryRepo.findAll();
+        List<Documentary> allDocumentaries = this.documentoryRepo.findAll();
 
         List<MediaDto> mediaDtos = allMovies.stream().map(movie -> this.movieToMediaDto(movie)).collect(Collectors.toList());
         mediaDtos.addAll(allSeries.stream().map(series -> this.seriesToMediaDto(series)).collect(Collectors.toList()));
@@ -54,7 +54,7 @@ public class MediaServiceImpl implements MediaService {
         return mediaDto;
     }
 
-    public MediaDto documentaryToMediaDto(Documentory documentory) {
+    public MediaDto documentaryToMediaDto(Documentary documentory) {
         MediaDto mediaDto = this.modelMapper.map(documentory, MediaDto.class);
         return mediaDto;
     }

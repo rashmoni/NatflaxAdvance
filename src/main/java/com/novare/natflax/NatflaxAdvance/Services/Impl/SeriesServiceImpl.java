@@ -35,23 +35,33 @@ public class SeriesServiceImpl implements SeriesService {
     @Override
     public SeriesDto createSeries(SeriesDto seriesDto) {
         String logMessage;
-        if(seriesDto.getBanner_url() != null || seriesDto.getThumbnail_url() != null){
+        if(seriesDto.getBanner_url() != null){
             logMessage = "Trying to convert base64 image and store it to filesystem..";
             log.info(logMessage);
 
             String bannerDataBytes = FileUtil.getImageFromBase64(seriesDto.getBanner_url());
-            String thumbDataBytes = FileUtil.getImageFromBase64(seriesDto.getThumbnail_url());
             byte [] bannerDecodedBytes = Base64.decodeBase64(bannerDataBytes);
-            byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
-            String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
             String baseURL = "http://localhost:9090/files/";
             String complete_banner_URL = baseURL + bannerURL;
-            String complete_thumb_URL = baseURL + thumbURL;
 
-            logMessage = "image successfully stored, image url is: "+ complete_banner_URL + " ---" + complete_thumb_URL;
+            logMessage = "image successfully stored, image url is: "+ complete_banner_URL;
             log.info(logMessage);
             seriesDto.setBanner_url(complete_banner_URL);
+        }
+
+        if(seriesDto.getThumbnail_url() != null){
+            logMessage = "Trying to convert base64 image and store it to filesystem..";
+            log.info(logMessage);
+
+            String thumbDataBytes = FileUtil.getImageFromBase64(seriesDto.getThumbnail_url());
+            byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
+            String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
+            String baseURL = "http://localhost:9090/files/";
+            String complete_thumb_URL = baseURL + thumbURL;
+
+            logMessage = "image successfully stored, image url is: "+ complete_thumb_URL;
+            log.info(logMessage);
             seriesDto.setThumbnail_url(complete_thumb_URL);
         }
         Series series = this.dtoToSeries(seriesDto);
@@ -72,31 +82,40 @@ public class SeriesServiceImpl implements SeriesService {
     public SeriesDto updateSeries(SeriesDto seriesDto) {
         String logMessage;
 
-        Series series = this.seriesRepo.findByTitle(seriesDto.getTitle()).orElseThrow(() -> new ResourceNotFoundException("Series", "Id", 0));
+        Series series = this.seriesRepo.findById(seriesDto.getId()).orElseThrow(() -> new ResourceNotFoundException("Series", "Id", 0));
 
-        Integer seriesID = series.getSeriesID();
-
-        if(seriesDto.getBanner_url() != null || seriesDto.getThumbnail_url() != null){
+        if(!seriesDto.getBanner_url().contains(".png")){
             logMessage = "Trying to convert base64 image and store it to filesystem..";
             log.info(logMessage);
 
             String bannerDataBytes = FileUtil.getImageFromBase64(seriesDto.getBanner_url());
-            String thumbDataBytes = FileUtil.getImageFromBase64(seriesDto.getThumbnail_url());
             byte [] bannerDecodedBytes = Base64.decodeBase64(bannerDataBytes);
-            byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
-            String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
             String baseURL = "http://localhost:9090/files/";
             String complete_banner_URL = baseURL + bannerURL;
-            String complete_thumb_URL = baseURL + thumbURL;
 
-            logMessage = "image successfully stored, image url is: "+ complete_banner_URL + " ---" + complete_thumb_URL;
+            logMessage = "image successfully stored, image url is: "+ complete_banner_URL;
             log.info(logMessage);
             seriesDto.setBanner_url(complete_banner_URL);
+        }
+
+        if(!seriesDto.getThumbnail_url().contains(".png")){
+            logMessage = "Trying to convert base64 image and store it to filesystem..";
+            log.info(logMessage);
+
+            String thumbDataBytes = FileUtil.getImageFromBase64(seriesDto.getThumbnail_url());
+            byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
+            String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
+            String baseURL = "http://localhost:9090/files/";
+            String complete_thumb_URL = baseURL + thumbURL;
+
+            logMessage = "image successfully stored, image url is: "+ complete_thumb_URL;
+            log.info(logMessage);
             seriesDto.setThumbnail_url(complete_thumb_URL);
         }
+
+
         series = this.dtoToSeries(seriesDto);
-        series.setSeriesID(seriesID);
         Series savedSeries = this.seriesRepo.save(series);
         logMessage = "Series is updated!";
         log.info(logMessage);

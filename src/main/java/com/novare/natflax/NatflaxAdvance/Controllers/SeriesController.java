@@ -14,14 +14,14 @@ import java.util.List;
 
 @RestController
 @Log4j2
-@RequestMapping("/api/series")
+@RequestMapping("/api/tv-series")
 
 public class SeriesController{
 
     @Autowired
     private SeriesService seriesService;
 
-    @PostMapping("/")
+    @PostMapping("/create")
     public ResponseEntity<SeriesDto> createSeries(@Valid @RequestBody SeriesDto seriesDto) {
         String message = "User tried to create new item with name: " + seriesDto.getTitle();
         log.info(message);
@@ -35,7 +35,7 @@ public class SeriesController{
         return ResponseEntity.ok(this.seriesService.getAllSeries());
     }
 
-    @PutMapping("/")
+    @PutMapping("/update")
     public ResponseEntity<SeriesDto> updateSeries(@Valid @RequestBody SeriesDto seriesDto){
         return ResponseEntity.ok(this.seriesService.updateSeries(seriesDto));
     }
@@ -44,7 +44,7 @@ public class SeriesController{
     public ResponseEntity<SeriesDto> getSeriesById(@PathVariable Integer seriesID){
         return ResponseEntity.ok(this.seriesService.getSeriesById(seriesID));
     }
-    @DeleteMapping("/{seriesID}")
+    @DeleteMapping("/delete/{seriesID}")
     public ResponseEntity<ApiResponse> deleteSeries(@PathVariable("seriesID") Integer seriesID){
         seriesService.deleteSeries(seriesID);
         return new ResponseEntity(new ApiResponse("Series deleted successfully",true), HttpStatus.OK);
