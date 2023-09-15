@@ -12,6 +12,7 @@ import com.novare.natflax.NatflaxAdvance.Services.MovieService;
 import com.novare.natflax.NatflaxAdvance.Utils.FileUtil;
 import lombok.extern.log4j.Log4j2;
 import org.apache.tomcat.util.codec.binary.Base64;
+import org.json.simple.JSONObject;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -87,9 +88,9 @@ public class MovieServiceImpl implements MovieService {
     public MovieDto updateMovie(MovieDto movieDto) {
         String logMessage;
 
-        Movie movie = this.movieRepo.findByTitle(movieDto.getTitle()).orElseThrow(() -> new ResourceNotFoundException("Movie", "Id", movieDto.getMovie_id()));
+        Movie movie = this.movieRepo.findByTitle(movieDto.getTitle()).orElseThrow(() -> new ResourceNotFoundException("Movie", "Id", movieDto.getId()));
 
-        Integer movieId = movie.getMovie_id();
+        Integer movieId = movie.getId();
 
         if(movieDto.getBanner_url() != null || movieDto.getThumbnail_url() != null){
             logMessage = "Trying to convert base64 image and store it to filesystem..";
@@ -111,7 +112,7 @@ public class MovieServiceImpl implements MovieService {
             movieDto.setThumbnail_url(complete_thumb_URL);
         }
         movie = this.dtoToMovie(movieDto);
-        movie.setMovie_id(movieId);
+        movie.setId(movieId);
 
         Movie savedMovie = this.movieRepo.save(movie);
         logMessage = "Movie is updated!";

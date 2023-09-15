@@ -14,5 +14,5 @@ public interface MovieService {
 
     MovieDto getMovieById(Integer movieId);
 
-    MovieDto updateMovie(JSONObject payload);
+    MovieDto updateMovie(MovieDto payload);
 }
