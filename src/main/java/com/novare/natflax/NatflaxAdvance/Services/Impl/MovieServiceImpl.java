@@ -1,8 +1,10 @@
 package com.novare.natflax.NatflaxAdvance.Services.Impl;
 
 import com.novare.natflax.NatflaxAdvance.Entity.Movie;
+import com.novare.natflax.NatflaxAdvance.Entity.User;
 import com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException;
 import com.novare.natflax.NatflaxAdvance.Payloads.MovieDto;
+import com.novare.natflax.NatflaxAdvance.Payloads.UserDto;
 import com.novare.natflax.NatflaxAdvance.Repositories.MovieRepo;
 import com.novare.natflax.NatflaxAdvance.Services.FileSystemStorageService;
 import com.novare.natflax.NatflaxAdvance.Services.IStorageService;
@@ -10,7 +12,6 @@ import com.novare.natflax.NatflaxAdvance.Services.MovieService;
 import com.novare.natflax.NatflaxAdvance.Utils.FileUtil;
 import lombok.extern.log4j.Log4j2;
 import org.apache.tomcat.util.codec.binary.Base64;
-import org.json.simple.JSONObject;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +37,7 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public MovieDto createMovie(MovieDto movieDto) {
+    public MovieDto createMovie(MovieDto movieDto ) {
         String logMessage;
         if(movieDto.getBanner_url() != null || movieDto.getThumbnail_url() != null){
             logMessage = "Trying to convert base64 image and store it to filesystem..";
@@ -68,12 +69,13 @@ public class MovieServiceImpl implements MovieService {
     public void deleteMovie(Integer mid) {
         Movie movie = this.movieRepo.findById(mid).orElseThrow(() -> new ResourceNotFoundException("Movie", "Id", mid));
         this.movieRepo.delete(movie);
+
     }
     @Override
     public List<MovieDto> getAllMovies() {
         List<Movie> movies= this.movieRepo.findAll();
-        List<MovieDto> movieDtos = movies.stream().map(movie -> this.movieToDto(movie)).collect(Collectors.toList());
-        return movieDtos;
+        List<MovieDto> userDtos = movies.stream().map(user -> this.movieToDto(user)).collect(Collectors.toList());
+        return userDtos;
     }
     @Override
     public MovieDto getMovieById(Integer movieId) {
@@ -82,63 +84,35 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public MovieDto updateMovie(JSONObject payload) {
+    public MovieDto updateMovie(MovieDto movieDto) {
         String logMessage;
 
-        Integer movieId = ((Integer) payload.get("id"));
-        String director = (String) payload.get("title");
-        Integer genre_id = (Integer) payload.get ("genre_id");
-        Integer rating = (Integer) payload.get ("rating");
-        String summary = (String) payload.get("summary");
-        String title = (String) payload.get("title");
-        String video_code = (String) payload.get("video_code");
+        Movie movie = this.movieRepo.findByTitle(movieDto.getTitle()).orElseThrow(() -> new ResourceNotFoundException("Movie", "Id", movieDto.getMovie_id()));
 
-        String banner_url = (String) payload.get("banner_url");
-        String thumbnail_url = (String) payload.get("thumbnail_url");
+        Integer movieId = movie.getMovie_id();
 
-        Movie movie = this.movieRepo.findById(movieId).orElseThrow(() -> new ResourceNotFoundException("Movie", "Id", 0));
-
-        MovieDto movieDto = this.movieToDto(movie);
-
-        if(!banner_url.contains(".png")){
+        if(movieDto.getBanner_url() != null || movieDto.getThumbnail_url() != null){
             logMessage = "Trying to convert base64 image and store it to filesystem..";
             log.info(logMessage);
 
-            String bannerDataBytes = FileUtil.getImageFromBase64(banner_url);
+            String bannerDataBytes = FileUtil.getImageFromBase64(movieDto.getBanner_url());
+            String thumbDataBytes = FileUtil.getImageFromBase64(movieDto.getThumbnail_url());
             byte [] bannerDecodedBytes = Base64.decodeBase64(bannerDataBytes);
-            String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
-            String baseURL = "http://localhost:9090/files/";
-            String complete_banner_URL = baseURL + bannerURL;
-
-            logMessage = "image successfully stored, image url is: "+ complete_banner_URL;
-            log.info(logMessage);
-            movieDto.setBanner_url(complete_banner_URL);
-        }
-
-        if(!thumbnail_url.contains(".png")){
-            logMessage = "Trying to convert base64 image and store it to filesystem..";
-            log.info(logMessage);
-
-            String thumbDataBytes = FileUtil.getImageFromBase64(thumbnail_url);
             byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
+            String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
             String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
             String baseURL = "http://localhost:9090/files/";
+            String complete_banner_URL = baseURL + bannerURL;
             String complete_thumb_URL = baseURL + thumbURL;
 
-            logMessage = "image successfully stored, image url is: " + " ---" + complete_thumb_URL;
+            logMessage = "image successfully stored, image url is: "+ complete_banner_URL + " ---" + complete_thumb_URL;
             log.info(logMessage);
+            movieDto.setBanner_url(complete_banner_URL);
             movieDto.setThumbnail_url(complete_thumb_URL);
         }
-
-
-        movieDto.setDirector(director);
-        movieDto.setGenre_id(genre_id);
-        movieDto.setRating(rating);
-        movieDto.setSummary(summary);
-        movieDto.setTitle(title);
-        movieDto.setVideo_code(video_code);
-
         movie = this.dtoToMovie(movieDto);
+        movie.setMovie_id(movieId);
+
         Movie savedMovie = this.movieRepo.save(movie);
         logMessage = "Movie is updated!";
         log.info(logMessage);
