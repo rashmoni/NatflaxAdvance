@@ -8,19 +8,21 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @Log4j2
-@RequestMapping("/api/tv-series")
+@RequestMapping("/api/v1/tv-series")
 
 public class SeriesController{
 
     @Autowired
     private SeriesService seriesService;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<SeriesDto> createSeries(@Valid @RequestBody SeriesDto seriesDto) {
         String message = "User tried to create new item with name: " + seriesDto.getTitle();
@@ -30,11 +32,13 @@ public class SeriesController{
         return new ResponseEntity<>(createSeriesDto, HttpStatus.CREATED);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/")
     public ResponseEntity<List<SeriesDto>> getAllSeries(){
         return ResponseEntity.ok(this.seriesService.getAllSeries());
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update")
     public ResponseEntity<SeriesDto> updateSeries(@Valid @RequestBody SeriesDto seriesDto){
         return ResponseEntity.ok(this.seriesService.updateSeries(seriesDto));
@@ -44,6 +48,8 @@ public class SeriesController{
     public ResponseEntity<SeriesDto> getSeriesById(@PathVariable Integer seriesID){
         return ResponseEntity.ok(this.seriesService.getSeriesById(seriesID));
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{seriesID}")
     public ResponseEntity<ApiResponse> deleteSeries(@PathVariable("seriesID") Integer seriesID){
         seriesService.deleteSeries(seriesID);

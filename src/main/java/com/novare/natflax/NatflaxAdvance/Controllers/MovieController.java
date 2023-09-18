@@ -9,18 +9,20 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping("/api/v1/media")
+@RequestMapping("/api/v1/movie")
 @Log4j2
 public class MovieController {
     @Autowired
     private MovieService movieService;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/")
     public ResponseEntity<MovieDto> createMovie(@Valid @RequestBody MovieDto movieDto) {
         String message = "User tried to create new item witth name: " + movieDto.getTitle();
@@ -30,6 +32,7 @@ public class MovieController {
         return new ResponseEntity<>(createMovieDto, HttpStatus.CREATED);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{movieId}")
     public ResponseEntity<ApiResponse> deleteMovie(@PathVariable("movieId") Integer uid){
         movieService.deleteMovie(uid);
@@ -46,6 +49,7 @@ public class MovieController {
         return ResponseEntity.ok(this.movieService.getMovieById(movieId));
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/")
     public ResponseEntity<MovieDto> updateMovie(@Valid @RequestBody MovieDto movieDto){
         return ResponseEntity.ok(this.movieService.updateMovie(movieDto));

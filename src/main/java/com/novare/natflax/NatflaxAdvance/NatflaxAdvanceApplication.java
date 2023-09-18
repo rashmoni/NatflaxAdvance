@@ -45,7 +45,11 @@ public class NatflaxAdvanceApplication implements CommandLineRunner {
 			role1.setId(AppConstants.NORMAL_USER);
 			role1.setName("ROLE_NORMAL");
 
-			List<Role> roles = List.of(role, role1);
+			Role role2 = new Role();
+			role2.setId(AppConstants.SUBSCRIBED_USER);
+			role2.setName("ROLE_SUBSCRIBED");
+
+			List<Role> roles = List.of(role, role1, role2);
 
 			List<Role> result = this.roleRepo.saveAll(roles);
 

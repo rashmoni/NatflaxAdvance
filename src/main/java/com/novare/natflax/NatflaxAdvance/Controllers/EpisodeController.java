@@ -8,18 +8,21 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
 @Log4j2
-@RequestMapping("/api")
+@RequestMapping("/api/v1")
 public class EpisodeController {
 
     @Autowired
     private EpisodeService episodeService;
 
+
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/episode/{seriesId}")
     public ResponseEntity<EpisodeDto> createEpisode(@Valid @RequestBody EpisodeDto episodeDto, @PathVariable Integer seriesId) {
         String message = "User tried to create new item with name: " + episodeDto.getTitle();
@@ -29,6 +32,7 @@ public class EpisodeController {
         return new ResponseEntity<>(createEpisodeDto, HttpStatus.CREATED);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/episode/update")
     public ResponseEntity<EpisodeDto> updateEpisode(@Valid @RequestBody EpisodeDto episodeDto) {
         String message = "User tried to create new item with name: " + episodeDto.getTitle();
@@ -48,6 +52,7 @@ public class EpisodeController {
         return new ResponseEntity<>(allEpisodesForSeries, HttpStatus.OK);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/episodes/{episodeId}")
     public ResponseEntity<ApiResponse> deleteEpisode(@PathVariable Integer episodeId) {
         String message = "User tried to delete an Episode";

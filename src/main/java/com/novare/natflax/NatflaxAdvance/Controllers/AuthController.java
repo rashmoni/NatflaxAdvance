@@ -16,12 +16,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -67,7 +64,7 @@ public class AuthController {
             this.authenticationManager.authenticate(authenticationToken);
 
         } catch (BadCredentialsException e) {
-            System.out.println("Invalid Detials !!");
+            System.out.println("Invalid Details !!");
             throw new ApiException("Invalid username or password !!");
         }
 
@@ -81,7 +78,7 @@ public class AuthController {
         return new ResponseEntity<UserDto>(registeredUser, HttpStatus.CREATED);
     }
 
-    // get loggedin user data
+    // get Logged-in user data
     @Autowired
     private UserRepo userRepo;
     @Autowired
@@ -90,7 +87,7 @@ public class AuthController {
     @GetMapping("/current-user/")
     public ResponseEntity<UserDto> getUser(Principal principal) {
         User user = this.userRepo.findByEmail(principal.getName()).get();
-        return new ResponseEntity<UserDto>(this.mapper.map(user, UserDto.class), HttpStatus.OK);
+        return new ResponseEntity<>(this.mapper.map(user, UserDto.class), HttpStatus.OK);
     }
 
 }
