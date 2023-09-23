@@ -35,8 +35,7 @@ public class UserDto {
 
     private String password;
 
-    @NotEmpty
-    private String about;
+    private int type = 2;
 
     private Set<RoleDto> roles = new HashSet<>();
 

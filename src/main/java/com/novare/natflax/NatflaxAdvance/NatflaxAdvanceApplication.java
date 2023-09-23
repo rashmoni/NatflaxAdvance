@@ -1,6 +1,6 @@
 package com.novare.natflax.NatflaxAdvance;
 
-import com.novare.natflax.NatflaxAdvance.Config.AppConstants;
+import com.novare.natflax.NatflaxAdvance.config.AppConstants;
 import com.novare.natflax.NatflaxAdvance.Entity.Role;
 import com.novare.natflax.NatflaxAdvance.Repositories.RoleRepo;
 import org.modelmapper.ModelMapper;

@@ -73,9 +73,14 @@ public class AuthController {
     // register new user api
 
     @PostMapping("/register")
-    public ResponseEntity<UserDto> registerUser(@Valid @RequestBody UserDto userDto) {
+    public ResponseEntity<JwtAuthResponse> registerUser(@Valid @RequestBody UserDto userDto) throws Exception {
         UserDto registeredUser = this.userService.registerNewUser(userDto);
-        return new ResponseEntity<UserDto>(registeredUser, HttpStatus.CREATED);
+        JwtAuthRequest jwtAuthRequest = new JwtAuthRequest();
+
+        jwtAuthRequest.setEmail(userDto.getEmail());
+        jwtAuthRequest.setPassword(userDto.getPassword());
+
+        return createToken(jwtAuthRequest);
     }
 
     // get Logged-in user data

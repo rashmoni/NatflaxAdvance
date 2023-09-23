@@ -27,7 +27,7 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "user_name", nullable = false, length = 100)
+    @Column(name = "name", nullable = false, length = 100)
     private String name;
 
     @Column(unique = true)
@@ -35,7 +35,7 @@ public class User implements UserDetails {
 
     private String password;
 
-    private String about;
+    private int type;
 
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

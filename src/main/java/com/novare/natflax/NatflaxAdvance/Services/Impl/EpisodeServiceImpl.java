@@ -83,7 +83,7 @@ public class EpisodeServiceImpl implements EpisodeService {
         Episode episode = episodeRepo.findById(episodeDto.getId()).orElseThrow(()-> new ResourceNotFoundException("Episode","Episode id ", episodeDto.getId()));
 
         String logMessage;
-        if(episodeDto.getThumbnail_url() != null){
+        if(!episodeDto.getThumbnail_url().startsWith("http")){
             logMessage = "Trying to convert base64 image and store it to filesystem..";
             log.info(logMessage);
 

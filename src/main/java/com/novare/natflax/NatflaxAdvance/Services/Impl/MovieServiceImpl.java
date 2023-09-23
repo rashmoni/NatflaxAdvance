@@ -92,25 +92,38 @@ public class MovieServiceImpl implements MovieService {
 
         Integer movieId = movie.getId();
 
-        if(movieDto.getBanner_url() != null || movieDto.getThumbnail_url() != null){
+        if(!movieDto.getBanner_url().startsWith("http")){
             logMessage = "Trying to convert base64 image and store it to filesystem..";
             log.info(logMessage);
 
             String bannerDataBytes = FileUtil.getImageFromBase64(movieDto.getBanner_url());
-            String thumbDataBytes = FileUtil.getImageFromBase64(movieDto.getThumbnail_url());
             byte [] bannerDecodedBytes = Base64.decodeBase64(bannerDataBytes);
-            byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
-            String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
             String baseURL = "http://localhost:9090/files/";
             String complete_banner_URL = baseURL + bannerURL;
-            String complete_thumb_URL = baseURL + thumbURL;
 
-            logMessage = "image successfully stored, image url is: "+ complete_banner_URL + " ---" + complete_thumb_URL;
+            logMessage = "image successfully stored, image url is: "+ complete_banner_URL;
             log.info(logMessage);
             movieDto.setBanner_url(complete_banner_URL);
+        }
+
+        if(!movieDto.getThumbnail_url().startsWith("http")){
+            logMessage = "Trying to convert base64 image and store it to filesystem..";
+            log.info(logMessage);
+
+            String thumbDataBytes = FileUtil.getImageFromBase64(movieDto.getThumbnail_url());
+            byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
+            String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
+            String baseURL = "http://localhost:9090/files/";
+            String complete_thumb_URL = baseURL + thumbURL;
+
+            logMessage = "image successfully stored, image url is: " + " ---" + complete_thumb_URL;
+            log.info(logMessage);
             movieDto.setThumbnail_url(complete_thumb_URL);
         }
+
+
+
         movie = this.dtoToMovie(movieDto);
         movie.setId(movieId);
 

@@ -84,7 +84,7 @@ public class SeriesServiceImpl implements SeriesService {
 
         Series series = this.seriesRepo.findById(seriesDto.getId()).orElseThrow(() -> new ResourceNotFoundException("Series", "Id", 0));
 
-        if(!seriesDto.getBanner_url().contains(".png")){
+        if(!seriesDto.getBanner_url().startsWith("http")){
             logMessage = "Trying to convert base64 image and store it to filesystem..";
             log.info(logMessage);
 
@@ -99,7 +99,7 @@ public class SeriesServiceImpl implements SeriesService {
             seriesDto.setBanner_url(complete_banner_URL);
         }
 
-        if(!seriesDto.getThumbnail_url().contains(".png")){
+        if(!seriesDto.getThumbnail_url().startsWith("http")){
             logMessage = "Trying to convert base64 image and store it to filesystem..";
             log.info(logMessage);
 

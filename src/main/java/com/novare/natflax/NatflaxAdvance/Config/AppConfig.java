@@ -1,4 +1,4 @@
-package com.novare.natflax.NatflaxAdvance.Config;
+package com.novare.natflax.NatflaxAdvance.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

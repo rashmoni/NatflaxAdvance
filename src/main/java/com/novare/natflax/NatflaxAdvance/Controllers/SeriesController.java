@@ -32,7 +32,6 @@ public class SeriesController{
         return new ResponseEntity<>(createSeriesDto, HttpStatus.CREATED);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/")
     public ResponseEntity<List<SeriesDto>> getAllSeries(){
         return ResponseEntity.ok(this.seriesService.getAllSeries());

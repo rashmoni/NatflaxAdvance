@@ -4,7 +4,7 @@ package com.novare.natflax.NatflaxAdvance.Services.Impl;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.novare.natflax.NatflaxAdvance.Config.AppConstants;
+import com.novare.natflax.NatflaxAdvance.config.AppConstants;
 import com.novare.natflax.NatflaxAdvance.Entity.Role;
 import com.novare.natflax.NatflaxAdvance.Entity.User;
 import com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException;
@@ -49,7 +49,7 @@ public class UserServiceImpl implements UserService {
         user.setName(userDto.getName());
         user.setEmail(userDto.getEmail());
         user.setPassword(userDto.getPassword());
-        user.setAbout(userDto.getAbout());
+        user.setType(userDto.getType());
 
         User updatedUser = this.userRepo.save(user);
         UserDto userDto1 = this.userToDto(updatedUser);
