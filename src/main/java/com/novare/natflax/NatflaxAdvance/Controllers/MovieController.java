@@ -38,7 +38,7 @@ public class MovieController {
         movieService.deleteMovie(uid);
         return new ResponseEntity(new ApiResponse("Movie deleted successfully",true), HttpStatus.OK);
     }
-    @GetMapping("/movies")
+    @GetMapping("/movies/")
     public ResponseEntity<List<MovieDto>> getAllMovie(){
         return ResponseEntity.ok(this.movieService.getAllMovies());
     }
