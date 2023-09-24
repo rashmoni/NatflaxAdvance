@@ -16,16 +16,16 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping("/api/v1/movies")
+@RequestMapping("/api/v1/movie")
 @Log4j2
 public class MovieController {
     @Autowired
     private MovieService movieService;
 
     @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/")
+    @PostMapping("/create")
     public ResponseEntity<MovieDto> createMovie(@Valid @RequestBody MovieDto movieDto) {
-        String message = "User tried to create new item witth name: " + movieDto.getTitle();
+        String message = "User tried to create new item with name: " + movieDto.getTitle();
         log.info(message);
 
         MovieDto createMovieDto = this.movieService.createMovie(movieDto);

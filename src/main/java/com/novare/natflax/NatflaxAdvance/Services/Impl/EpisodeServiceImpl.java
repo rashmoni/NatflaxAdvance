@@ -52,7 +52,7 @@ public class EpisodeServiceImpl implements EpisodeService {
             String thumbDataBytes = FileUtil.getImageFromBase64(episodeDto.getThumbnail_url());
             byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
-            String baseURL = "http://localhost:9090/files/";
+            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_thumb_URL = baseURL + thumbURL;
 
             logMessage = "image successfully stored, image url is: " + " ---" + complete_thumb_URL;
@@ -90,7 +90,7 @@ public class EpisodeServiceImpl implements EpisodeService {
             String thumbDataBytes = FileUtil.getImageFromBase64(episodeDto.getThumbnail_url());
             byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
-            String baseURL = "http://localhost:9090/files/";
+            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_thumb_URL = baseURL + thumbURL;
 
             logMessage = "image successfully stored, image url is: " + " ---" + complete_thumb_URL;

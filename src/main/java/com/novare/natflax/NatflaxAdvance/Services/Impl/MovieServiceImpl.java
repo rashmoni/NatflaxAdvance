@@ -50,7 +50,7 @@ public class MovieServiceImpl implements MovieService {
             byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
             String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
-            String baseURL = "http://localhost:9090/files/";
+            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_banner_URL = baseURL + bannerURL;
             String complete_thumb_URL = baseURL + thumbURL;
 
@@ -99,7 +99,7 @@ public class MovieServiceImpl implements MovieService {
             String bannerDataBytes = FileUtil.getImageFromBase64(movieDto.getBanner_url());
             byte [] bannerDecodedBytes = Base64.decodeBase64(bannerDataBytes);
             String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
-            String baseURL = "http://localhost:9090/files/";
+            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_banner_URL = baseURL + bannerURL;
 
             logMessage = "image successfully stored, image url is: "+ complete_banner_URL;
@@ -114,7 +114,7 @@ public class MovieServiceImpl implements MovieService {
             String thumbDataBytes = FileUtil.getImageFromBase64(movieDto.getThumbnail_url());
             byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
-            String baseURL = "http://localhost:9090/files/";
+            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_thumb_URL = baseURL + thumbURL;
 
             logMessage = "image successfully stored, image url is: " + " ---" + complete_thumb_URL;

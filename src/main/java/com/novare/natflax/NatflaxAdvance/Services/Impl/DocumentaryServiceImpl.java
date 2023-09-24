@@ -39,7 +39,7 @@ public class DocumentaryServiceImpl implements DocumentaryService {
             String bannerDataBytes = FileUtil.getImageFromBase64(documentaryDto.getBanner_url());
             byte [] bannerDecodedBytes = Base64.decodeBase64(bannerDataBytes);
             String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
-            String baseURL = "http://localhost:9090/files/";
+            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_banner_URL = baseURL + bannerURL;
 
             logMessage = "image successfully stored, image url is: "+ complete_banner_URL + " ---";
@@ -109,7 +109,7 @@ public class DocumentaryServiceImpl implements DocumentaryService {
             String bannerDataBytes = FileUtil.getImageFromBase64(documentaryDto.getBanner_url());
             byte [] bannerDecodedBytes = Base64.decodeBase64(bannerDataBytes);
             String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
-            String baseURL = "http://localhost:9090/files/";
+            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_banner_URL = baseURL + bannerURL;
 
             logMessage = "image successfully stored, image url is: "+ complete_banner_URL;
