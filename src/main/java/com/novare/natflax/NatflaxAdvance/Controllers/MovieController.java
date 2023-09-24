@@ -16,14 +16,14 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping("/api/v1/movie")
+@RequestMapping("/api/v1")
 @Log4j2
 public class MovieController {
     @Autowired
     private MovieService movieService;
 
     @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/create")
+    @PostMapping("/movie/create")
     public ResponseEntity<MovieDto> createMovie(@Valid @RequestBody MovieDto movieDto) {
         String message = "User tried to create new item with name: " + movieDto.getTitle();
         log.info(message);
@@ -33,24 +33,24 @@ public class MovieController {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    @DeleteMapping("/{movieId}")
+    @DeleteMapping("/movie/{movieId}")
     public ResponseEntity<ApiResponse> deleteMovie(@PathVariable("movieId") Integer uid){
         movieService.deleteMovie(uid);
         return new ResponseEntity(new ApiResponse("Movie deleted successfully",true), HttpStatus.OK);
     }
-    @GetMapping("/")
+    @GetMapping("/movies")
     public ResponseEntity<List<MovieDto>> getAllMovie(){
         return ResponseEntity.ok(this.movieService.getAllMovies());
     }
 
 
-    @GetMapping("/{movieId}")
+    @GetMapping("/movie/{movieId}")
     public ResponseEntity<MovieDto> getSingleMovie(@PathVariable Integer movieId){
         return ResponseEntity.ok(this.movieService.getMovieById(movieId));
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    @PutMapping("/")
+    @PutMapping("/movie/update")
     public ResponseEntity<MovieDto> updateMovie(@Valid @RequestBody MovieDto movieDto){
         return ResponseEntity.ok(this.movieService.updateMovie(movieDto));
     }
