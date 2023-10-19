@@ -14,6 +14,7 @@ import lombok.extern.log4j.Log4j2;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -41,6 +42,8 @@ public class EpisodeServiceImpl implements EpisodeService {
         this.iStorageService = iStorageService;
     }
 
+    @Value("${baseURL}")
+    private String baseURL;
     @Override
     public EpisodeDto createEpisode(EpisodeDto episodeDto, Integer seriesId) {
 
@@ -52,7 +55,6 @@ public class EpisodeServiceImpl implements EpisodeService {
             String thumbDataBytes = FileUtil.getImageFromBase64(episodeDto.getThumbnail_url());
             byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
-            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_thumb_URL = baseURL + thumbURL;
 
             logMessage = "image successfully stored, image url is: " + " ---" + complete_thumb_URL;
@@ -90,7 +92,6 @@ public class EpisodeServiceImpl implements EpisodeService {
             String thumbDataBytes = FileUtil.getImageFromBase64(episodeDto.getThumbnail_url());
             byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
-            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_thumb_URL = baseURL + thumbURL;
 
             logMessage = "image successfully stored, image url is: " + " ---" + complete_thumb_URL;

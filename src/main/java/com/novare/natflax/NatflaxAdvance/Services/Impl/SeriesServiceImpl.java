@@ -12,6 +12,7 @@ import lombok.extern.log4j.Log4j2;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,6 +29,9 @@ public class SeriesServiceImpl implements SeriesService {
     FileSystemStorageService fileSystemStorageService;
     private final IStorageService iStorageService;
 
+    @Value("${baseURL}")
+    private String baseURL;
+
     public SeriesServiceImpl(IStorageService iStorageService) {
         this.iStorageService = iStorageService;
     }
@@ -42,7 +46,6 @@ public class SeriesServiceImpl implements SeriesService {
             String bannerDataBytes = FileUtil.getImageFromBase64(seriesDto.getBanner_url());
             byte [] bannerDecodedBytes = Base64.decodeBase64(bannerDataBytes);
             String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
-            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_banner_URL = baseURL + bannerURL;
 
             logMessage = "image successfully stored, image url is: "+ complete_banner_URL;
@@ -57,7 +60,6 @@ public class SeriesServiceImpl implements SeriesService {
             String thumbDataBytes = FileUtil.getImageFromBase64(seriesDto.getThumbnail_url());
             byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
-            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_thumb_URL = baseURL + thumbURL;
 
             logMessage = "image successfully stored, image url is: "+ complete_thumb_URL;
@@ -91,7 +93,6 @@ public class SeriesServiceImpl implements SeriesService {
             String bannerDataBytes = FileUtil.getImageFromBase64(seriesDto.getBanner_url());
             byte [] bannerDecodedBytes = Base64.decodeBase64(bannerDataBytes);
             String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
-            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_banner_URL = baseURL + bannerURL;
 
             logMessage = "image successfully stored, image url is: "+ complete_banner_URL;
@@ -106,7 +107,6 @@ public class SeriesServiceImpl implements SeriesService {
             String thumbDataBytes = FileUtil.getImageFromBase64(seriesDto.getThumbnail_url());
             byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
-            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_thumb_URL = baseURL + thumbURL;
 
             logMessage = "image successfully stored, image url is: "+ complete_thumb_URL;

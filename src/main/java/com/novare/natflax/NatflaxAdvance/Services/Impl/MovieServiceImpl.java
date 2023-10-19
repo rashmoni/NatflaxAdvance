@@ -1,10 +1,8 @@
 package com.novare.natflax.NatflaxAdvance.Services.Impl;
 
 import com.novare.natflax.NatflaxAdvance.Entity.Movie;
-import com.novare.natflax.NatflaxAdvance.Entity.User;
 import com.novare.natflax.NatflaxAdvance.Exceptions.ResourceNotFoundException;
 import com.novare.natflax.NatflaxAdvance.Payloads.MovieDto;
-import com.novare.natflax.NatflaxAdvance.Payloads.UserDto;
 import com.novare.natflax.NatflaxAdvance.Repositories.MovieRepo;
 import com.novare.natflax.NatflaxAdvance.Services.FileSystemStorageService;
 import com.novare.natflax.NatflaxAdvance.Services.IStorageService;
@@ -12,9 +10,9 @@ import com.novare.natflax.NatflaxAdvance.Services.MovieService;
 import com.novare.natflax.NatflaxAdvance.Utils.FileUtil;
 import lombok.extern.log4j.Log4j2;
 import org.apache.tomcat.util.codec.binary.Base64;
-import org.json.simple.JSONObject;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -33,6 +31,9 @@ public class MovieServiceImpl implements MovieService {
 
     private final IStorageService iStorageService;
 
+    @Value("${baseURL}")
+    private String baseURL;
+
     public MovieServiceImpl(IStorageService iStorageService) {
         this.iStorageService = iStorageService;
     }
@@ -50,7 +51,6 @@ public class MovieServiceImpl implements MovieService {
             byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
             String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
-            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_banner_URL = baseURL + bannerURL;
             String complete_thumb_URL = baseURL + thumbURL;
 
@@ -99,7 +99,6 @@ public class MovieServiceImpl implements MovieService {
             String bannerDataBytes = FileUtil.getImageFromBase64(movieDto.getBanner_url());
             byte [] bannerDecodedBytes = Base64.decodeBase64(bannerDataBytes);
             String bannerURL = this.fileSystemStorageService.storeBase64(bannerDecodedBytes);
-            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_banner_URL = baseURL + bannerURL;
 
             logMessage = "image successfully stored, image url is: "+ complete_banner_URL;
@@ -114,7 +113,6 @@ public class MovieServiceImpl implements MovieService {
             String thumbDataBytes = FileUtil.getImageFromBase64(movieDto.getThumbnail_url());
             byte [] thumbDecodedBytes = Base64.decodeBase64(thumbDataBytes);
             String thumbURL = this.fileSystemStorageService.storeBase64(thumbDecodedBytes);
-            String baseURL = "http://20.240.55.130:9090/files/";
             String complete_thumb_URL = baseURL + thumbURL;
 
             logMessage = "image successfully stored, image url is: " + " ---" + complete_thumb_URL;
