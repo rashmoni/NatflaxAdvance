@@ -33,7 +33,7 @@ public class MovieController {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    @DeleteMapping("/movie/{movieId}")
+    @DeleteMapping("/movies/{movieId}")
     public ResponseEntity<ApiResponse> deleteMovie(@PathVariable("movieId") Integer uid){
         movieService.deleteMovie(uid);
         return new ResponseEntity(new ApiResponse("Movie deleted successfully",true), HttpStatus.OK);
@@ -44,13 +44,13 @@ public class MovieController {
     }
 
 
-    @GetMapping("/movie/{movieId}")
+    @GetMapping("/movies/{movieId}")
     public ResponseEntity<MovieDto> getSingleMovie(@PathVariable Integer movieId){
         return ResponseEntity.ok(this.movieService.getMovieById(movieId));
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    @PutMapping("/movie/update")
+    @PutMapping("/movies/update")
     public ResponseEntity<MovieDto> updateMovie(@Valid @RequestBody MovieDto movieDto){
         return ResponseEntity.ok(this.movieService.updateMovie(movieDto));
     }
