@@ -54,7 +54,7 @@ public class NatflaxAdvanceApplication implements CommandLineRunner {
 			List<Role> result = this.roleRepo.saveAll(roles);
 
 			result.forEach(r -> {
-				System.out.println(r.getName());
+				//System.out.println(r.getName());
 			});
 
 		} catch (Exception e) {

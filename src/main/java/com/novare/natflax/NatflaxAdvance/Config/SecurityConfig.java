@@ -1,4 +1,4 @@
-package com.novare.natflax.NatflaxAdvance.config;
+package com.novare.natflax.NatflaxAdvance.Config;
 
 import com.novare.natflax.NatflaxAdvance.Security.JwtAuthenticationEntryPoint;
 import com.novare.natflax.NatflaxAdvance.Security.JwtAuthenticationFilter;
